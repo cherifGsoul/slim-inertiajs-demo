@@ -10,7 +10,9 @@ use SlimInertia\Http\Handler\ContactHandler;
 return function (App $app) {
     $app->get('/', function(Request $request, Response $response) {
         $inertia = $request->getAttribute(InertiaMiddleware::INERTIA_ATTRIBUTE);
-        return $inertia->render('Home', []);
+        return $inertia->render('Home', [
+            'message' => 'Hello from Inertia Response!'
+        ]);
     });
     $app->get('/contact', ContactHandler::class);
 };

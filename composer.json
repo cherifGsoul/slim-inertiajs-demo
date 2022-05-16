@@ -1,0 +1,23 @@
+{
+    "name": "cherif/slim-inertia",
+    "autoload": {
+        "psr-4": {
+            "SlimInertia\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cherif BOUCHELAGHEM",
+            "email": "cherif.bouchelaghem@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "cherif/inertia-psr15": "^0.1.0",
+        "laminas/laminas-diactoros": "^2.10",
+        "php-di/php-di": "^6.4",
+        "slim/twig-view": "^3.3",
+        "fullpipe/twig-webpack-extension": "^4.0",
+        "slim/slim": "4.*"
+    }
+}

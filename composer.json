@@ -3,14 +3,11 @@
     "description": "Slim Framework (v4) with Twig templates, InertiaJS and React (v18)",
     "autoload": {
         "psr-4": {
-            "SlimInertia\\": "src/"
+            "SlimInertia\\": "src/",
+            "App\\": "server/app"
         }
     },
     "authors": [
-        {
-            "name": "Cherif BOUCHELAGHEM",
-            "email": "cherif.bouchelaghem@gmail.com"
-        },
         {
             "name": "Luke Watts",
             "email": "watts.luke@yahoo.com"
@@ -21,8 +18,7 @@
         "cherif/inertia-psr15": "^0.1.0",
         "laminas/laminas-diactoros": "^2.10",
         "php-di/php-di": "^6.4",
-        "slim/twig-view": "^3.3",
-        "fullpipe/twig-webpack-extension": "^4.0",
-        "slim/slim": "4.*"
+        "slim/slim": "4.*",
+        "slim/php-view": "^3.1"
     }
 }

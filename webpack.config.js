@@ -1,8 +1,8 @@
 const path = require("path");
-const webpack = require("webpack");
+// const webpack = require("webpack");
 
 module.exports = {
-  entry: "./assets/js/app.js",
+  entry: "./client/js/app.js",
   mode: "development",
   module: {
     rules: [

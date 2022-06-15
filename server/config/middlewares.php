@@ -1,6 +1,4 @@
-<?php
-declare(strict_types=1);
-
+<?php declare(strict_types=1);
 use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;
 use Slim\App;
 

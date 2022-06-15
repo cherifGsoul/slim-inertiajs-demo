@@ -1,26 +1,35 @@
 {
-  "name": "slim-inertia",
+  "name": "slimph-inertiajs-react",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev-server": "encore dev-server",
-    "dev": "encore dev",
-    "watch": "encore dev --watch",
-    "build": "encore production --progress"
+    "dev": "webpack --progress",
+    "watch": "webpack --watch",
+    "build": "webpack --env prod --progress"
   },
   "keywords": [],
-  "author": "",
+  "author": "Luke Watts",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
     "@inertiajs/inertia": "^0.11.0",
-    "@inertiajs/inertia-svelte": "^0.8.0",
-    "svelte": "^3.48.0",
+    "@inertiajs/inertia-react": "^0.8.0",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.52.3",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-dev-server": "^4.9.2",
     "ziggy-js": "^1.4.6"
   },
   "devDependencies": {
-    "@symfony/webpack-encore": "^2.1.0",
-    "svelte-loader": "^3.1.2",
+    "webpack-cli": "^4.10.0",
     "webpack-notifier": "^1.15.0"
   }
 }

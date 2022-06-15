@@ -6,14 +6,14 @@
     {% block stylesheets %}
 {#        {% webpack_entry_css 'build/app' %}#}
     {% endblock %}
-{#    {{ marley_routes() }}#}
-
+{#    {{ marley_routes() }} #}
+    <script defer src="/build/app.js"></script>
 </head>
 <body>
     {{ inertia(page) }}
     {% block javascripts %}
-        {% webpack_entry_js 'build/runtime' %}
-        {% webpack_entry_js 'build/app' %}
+        {# {% webpack_entry_js 'build/runtime' %} #}
+        {# {% webpack_entry_js 'build/app' %} #}
     {% endblock %}
 </body>
 </html>

@@ -1,48 +1,40 @@
 # Slim Inertiajs
 
-## Install
-For PHP
+Demo of how to integrate InteriaJS with React (v18) into the Slim Framework (v4) with Twig templates
 
-```shell
+Based on cherifGsoul/slim-inertiajs-demo, which uses Symfony Encore and Svelte.
+
+This project however does not use Encore and replaces Svelte with React
+
+## Installation
+
+Composer packages
+
+```bash
 composer install
 ```
 
-For JS:
+NPM packages:
 
-```shell
+```bash
 yarn install
 ```
 
-Or:
+## Frontend Development
 
-```shell
-npm install
-```
-
-## Watch JS during development:
-
-```shell
+```bash
 yarn watch
+# or yarn dev
 ```
 
-or
-```shell
-npm run watch
-```
+## Build JS for production
 
-## Build JS:
-
-```shell
+```bash
 yarn build
 ```
 
-or
-```shell
-npm run build
-```
+## Run PHP server
 
-## Run PHP server:
-
-```shell
-php -S localhost:8000 -t public
+```bash
+php -S localhost:80 -t public
 ```

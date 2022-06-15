@@ -1,5 +1,6 @@
 {
-    "name": "cherif/slim-inertia",
+    "name": "luke-watts/slimphp-inertiajs-react",
+    "description": "Slim Framework (v4) with Twig templates, InertiaJS and React (v18)",
     "autoload": {
         "psr-4": {
             "SlimInertia\\": "src/"
@@ -9,6 +10,10 @@
         {
             "name": "Cherif BOUCHELAGHEM",
             "email": "cherif.bouchelaghem@gmail.com"
+        },
+        {
+            "name": "Luke Watts",
+            "email": "watts.luke@yahoo.com"
         }
     ],
     "require": {

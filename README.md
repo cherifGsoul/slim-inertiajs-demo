@@ -1,6 +1,6 @@
-# Slim Inertiajs
+# RIST Framework (React / Inertiajs / Slim / Tailwind)
 
-Demo of how to integrate InteriaJS with React (v18) into the Slim Framework (v4) with noraml PHP views
+Demo of how to integrate InteriaJS with React (v18) into the Slim Framework (v4) with normal PHP views based on Slim/PHP-View
 
 Started as a fork of the amazing work of cherifGsoul/slim-inertiajs-demo, which uses Symfony Encore and Svelte.
 

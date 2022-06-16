@@ -1,42 +1,12 @@
-###> symfony/framework-bundle ###
-/.env.local
-/.env.local.php
-/.env.*.local
-/config/secrets/prod/prod.decrypt.private.php
-/public/bundles/
-/var/
-/vendor/
-###< symfony/framework-bundle ###
-
-###> phpunit/phpunit ###
-/phpunit.xml
+.idea
+.vscode
+.env.local
+.env.local.php
+.env.*.local
+node_modules/
+vendor/
+.phpunit.cache/*
 .phpunit.result.cache
-###< phpunit/phpunit ###
-
-###> symfony/phpunit-bridge ###
-.phpunit.result.cache
-/phpunit.xml
-###< symfony/phpunit-bridge ###
-
-###> symfony/webpack-encore-bundle ###
-/node_modules/
-/public/build/
 npm-debug.log
 yarn-error.log
-###< symfony/webpack-encore-bundle ###
-
-# exclude everything
-docker/mysql/*
-
-# exception to the rule
-!docker/mysql/.gitkeep
-.idea/
-drivers/
-build/
-
-config/settings.local.php
-config/settings.prod.php
-/build/
-/tests/db.sqlite
-/browsers/
-/.phpunit.cache/*
+public/dist

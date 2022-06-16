@@ -1,9 +1,10 @@
 {
     "name": "luke-watts/slimphp-inertiajs-react",
     "description": "Slim Framework (v4) with Twig templates, InertiaJS and React (v18)",
+    "licence": "MIT",
     "autoload": {
         "psr-4": {
-            "SlimInertia\\": "src/",
+            "Rist\\": "src/",
             "App\\": "server/app"
         }
     },

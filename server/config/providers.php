@@ -9,7 +9,7 @@ use Laminas\Diactoros\ResponseFactory;
 use Laminas\Diactoros\StreamFactory;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
-use SlimInertia\View\View;
+use Rist\View\View;
 
 return [
     InertiaMiddleware::class => function (ContainerInterface $container) {

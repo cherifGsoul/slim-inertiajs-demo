@@ -1,11 +1,9 @@
 <?php declare(strict_types=1);
 
 use App\Http\Controller\PagesController;
-use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use SlimInertia\View\View;
+use Rist\View\View;
 
 $route->get('/', [PagesController::class, 'home']);
 

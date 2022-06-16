@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace SlimInertia\View;
+namespace Rist\View;
 
 use Psr\Http\Message\ResponseInterface;
 use Slim\Views\PhpRenderer;

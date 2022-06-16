@@ -14,13 +14,19 @@ The aim of this project will be to allow developers to have everything for a ful
 
 ## Installation
 
-Composer packages
+Clone
+
+```bash
+git clone https://github.com/lukewatts/slimphp-inertiajs-react.git
+```
+
+Install Composer packages
 
 ```bash
 composer install
 ```
 
-NPM packages:
+Install NPM packages:
 
 ```bash
 yarn install
@@ -43,4 +49,48 @@ yarn build
 
 ```bash
 php -S localhost:80 -t public
+```
+
+## Console
+
+RIST has console commands (like most other frameworks)
+
+### php rist list
+
+List all available command
+
+### php rist help
+
+Show help documentation for RIST console
+
+### php rist create:presenter --name {presenter_name}
+
+Generates a boilerplate Presenter class in server/app/Http/Presenter
+
+Example:
+
+`php rist create:presenter --name Test` will generate TestPresenter in server/app/Http/Presenter which have the following boilerplate code:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Http\Presenter;
+
+use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;
+use Psr\Http\Message\ResponseInterface;
+
+/**
+ * Test Presenter
+ */
+class TestPresenter extends \Rist\Presenter\Presenter
+{
+	public function index($request, $response): ResponseInterface
+	{
+		$inertia = $request->getAttribute(InertiaMiddleware::INERTIA_ATTRIBUTE);
+
+		return $inertia->render('Index', ['var' => 'I can be used in JSX!']);
+	}
+}
 ```

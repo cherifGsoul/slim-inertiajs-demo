@@ -20,6 +20,7 @@
         "laminas/laminas-diactoros": "^2.10",
         "php-di/php-di": "^6.4",
         "slim/slim": "4.*",
-        "slim/php-view": "^3.1"
+        "slim/php-view": "^3.1",
+        "nette/php-generator": "^4.0"
     }
 }

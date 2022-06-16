@@ -1,0 +1,251 @@
+#!/usr/bin/env php
+<?php
+
+use Nette\PhpGenerator\ClassType;
+use Nette\PhpGenerator\PhpFile;
+use Nette\PhpGenerator\PsrPrinter;
+use Rist\Console\Console;
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+class Cli
+{
+    /**
+     * instance
+     *
+     * @var Console|null
+     */
+    private static $instance = null;
+
+    /**
+     * Argv
+     *
+     * @var array
+     */
+    private static array $argv;
+
+    /**
+     * Arguments
+     *
+     * @var array
+     */
+    private static array $arguments;
+
+    public static function createFrom(array $argv, array $argument_definitions)
+    {
+        if (!isset(self::$instance)) {
+            $Console = new Console;
+            $Console->arguments->add($argument_definitions);
+            $Console->arguments->parse($argv);
+            self::$arguments = $Console->arguments->all();
+            self::$instance = $Console;
+            self::$argv = $argv;
+            
+        }
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public static function intro()
+    {
+        self::$instance->animation('rits-framework')->enterFrom('top');
+        self::$instance->white('RITS Framework')->green('0.1.0');
+        self::$instance->description("RITS (React, InertiaJS, Tailwind, Slim) is a fully extensible framework with easy SPA routing using InertiaJS");
+        self::$instance->br();
+    }
+
+    public static function hasArguments(): bool
+    {
+        return self::$instance->arguments->hasArguments();
+    }
+
+    public static function displayUsage()
+    {
+        self::$instance->usage();
+        self::$instance->br();
+    }
+
+    public static function listAllCommands()
+    {
+        self::$instance->out('List of commands:');
+        self::$instance->green('help');
+        $Padding = self::$instance->padding(10);
+        self::$instance->tab();
+        $Padding->label('help')->result('Display help documentation for the RITS Console');
+    }
+
+    public static function unknownCommandError()
+    {
+        $argv = self::$argv;
+        self::$instance->error("Unknown command: {$argv[1]}");
+    }
+
+    public static function create(string $to_make)
+    {
+        switch ($to_make) {
+            case 'presenter' :
+                if (!self::$instance->arguments->defined('name')) {
+                    self::$instance->error('Command create:presenter requires a --name (-n) parameter');
+                }
+
+                $name = self::$instance->arguments->get('name');
+
+                $class_name = "{$name}Presenter";
+                $class = new ClassType($class_name);
+                $class->addComment("$name Presenter")
+                    ->setExtends('Rist\Presenter\Presenter');
+
+                $method = $class->addMethod('index')
+                    ->setReturnType('Psr\Http\Message\ResponseInterface')
+                    ->setBody('$inertia = $request->getAttribute(InertiaMiddleware::INERTIA_ATTRIBUTE);
+
+return $inertia->render(\'Index\', [\'var\' => \'I can be used in JSX!\']);');
+                $method->addParameter('request');
+                $method->addParameter('response');
+
+                $namespace = new Nette\PhpGenerator\PhpNamespace('App\Http\Presenter');
+                $namespace
+                    ->addUse('Cherif\InertiaPsr15\Middleware\InertiaMiddleware')
+                    ->addUse('Psr\Http\Message\ResponseInterface');
+                
+                $namespace->add($class);
+
+                $file = new PhpFile;
+                $file->setStrictTypes();
+
+                $file->addNamespace($namespace);
+
+                $presenters_directory = __DIR__ . '/server/app/Http/Presenter';
+                $file_name = "{$class_name}.php";
+                $file_path = "${presenters_directory}/{$file_name}";
+                if (file_exists($file_path)) {
+                    self::$instance->error("File $file_path already exists");
+                } else {
+                    $handle = fopen($file_path, "w");
+                    fwrite($handle, $file);
+
+                    self::$instance->green("Successfully created presenter at $file_path");
+                }
+            break;
+        }
+    }
+}
+
+$Console = new \Rist\Console\Console;
+
+Cli::createFrom($argv, [
+    'help' => [
+        'prefix'      => 'h',
+        'longPrefix'  => 'help',
+        'description' => 'Display help documentation for a command',
+        'noValue'     => true
+    ],
+    'name' => [
+        'prefix'      => 'name',
+        'longPrefix'  => 'name',
+        'description' => 'Name argument of a command (e.g. name of a presenter class)',
+        'castTo'      => 'string',
+    ]
+]);
+Cli::intro();
+
+if (!Cli::hasArguments()) {
+    Cli::displayUsage();
+} else {
+    switch($argv[1]) {
+        case 'help': 
+            Cli::displayUsage();
+        break;
+        case 'list' :
+            Cli::listAllCommands($Console);
+        break;
+        case 'create:presenter' :
+            Cli::create('presenter');
+        break;
+        default:
+            Cli::unknownCommandError();
+            Cli::displayUsage();
+        break;
+    }
+}
+
+
+
+
+
+
+
+
+
+// $console->table([
+//     [
+//         'Version' => '0.1',
+//         'Author' => 'Luke Watts'
+//     ]
+// ]);
+
+// $console->inline('Waiting');
+// for ($i = 0; $i < 10; $i++) {
+//     $console->inline('.');
+// }
+// $console->out('');
+
+
+// $console->red('Red text');
+// $console->blue('blue text');
+
+// $console->columns(range(1, 50));
+
+// $console->border('*');
+
+// $padding = $console->padding(10);
+
+// $padding->label('Eggs')->result('$1.99');
+// $padding->label('Oatmeal')->result('$4.99');
+// $padding->label('Bacon')->result('$2.99');
+
+// $console->usage([
+//     'what',
+//     'is',
+//     'this',
+// ]);
+
+// $console->json([
+//     'name' => 'Gary',
+//     'age'  => 52,
+//     'job'  => 'Engineer',
+// ]);
+
+// $console->dump([
+//     'This',
+//     'That',
+//     'Other Thing',
+// ]);
+
+// $console->flank('Look at me. Now.');
+// $console->flank('Look at me. Now.', '!', 5);
+
+// $console->br();
+
+// $console->br()->out('I have moved down a line.');
+
+// $console->tab()->out('I am all sorts of indented.');
+// $console->tab()->tab()->tab()->out('I am even more indented.');
+// $console->tab(7)->out('I am extremely indented.');
+
+// $console->draw('bender');
+
+// $console->animation('hello')->enterFrom('right');
+// $console->animation('hello')->enterFrom('left');
+// $console->animation('hello')->enterFrom('top');
+// $console->animation('hello')->enterFrom('bottom');
+
+// $console->animation('hello')->exitTo('right');
+// $console->animation('hello')->exitTo('left');
+// $console->animation('hello')->exitTo('top');
+// $console->animation('hello')->exitTo('bottom');
+
+// $console->clear();

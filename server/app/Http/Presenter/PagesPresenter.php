@@ -1,25 +1,22 @@
 <?php declare(strict_types=1);
-namespace App\Http\Controller;
+namespace App\Http\Presenter;
 
 use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;
-use Psr\Container\ContainerInterface;
+use Psr\Http\Message\ResponseInterface;
+use Rist\Presenter\Presenter;
 
-class PagesController
+class PagesPresenter extends Presenter
 {
-     protected $container;
-
-     public function __construct(ContainerInterface $container) {
-          $this->container = $container;
-     }
-
-     public function home($request) {
+     public function home($request): ResponseInterface
+     {
           $inertia = $request->getAttribute(InertiaMiddleware::INERTIA_ATTRIBUTE);
           return $inertia->render('Home', [
                'message' => 'Hello from Inertia Response!'
           ]);
      }
 
-     public function contact($request) {
+     public function contact($request): ResponseInterface
+     {
           $inertia = $request->getAttribute(InertiaMiddleware::INERTIA_ATTRIBUTE);
           return $inertia->render('Contact', ['author' => 'Luke Watts']);
      }

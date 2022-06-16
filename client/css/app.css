@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+table {
+    @apply w-full border-collapse;
+}

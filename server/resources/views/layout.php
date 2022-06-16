@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="/build/app.js"></script>
+    <link rel="stylesheet" href="/dist/app.css">
+    <script defer src="/dist/app.js"></script>
 </head>
 <body>
     <?= $content ?>

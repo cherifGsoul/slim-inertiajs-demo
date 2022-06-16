@@ -6,6 +6,7 @@ use DI\ContainerBuilder;
 use Slim\Factory\AppFactory;
 use Slim\Handlers\Strategies\RequestResponseArgs;
 use Slim\Routing\RouteCollectorProxy;
+use Zeuxisoo\Whoops\Slim\WhoopsMiddleware;
 
 try {
     $config = require dirname(__DIR__) . '/config/app.php';
@@ -15,6 +16,12 @@ try {
     $containerBuilder->addDefinitions($providers);
     $container = $containerBuilder->build();
     $app = AppFactory::createFromContainer($container);
+    $app->add(new WhoopsMiddleware([
+        'enable' => ($config['environment'] !== 'prod' && $config['environment'] !== 'production') ? true : false,
+        'editor' => 'vscode'
+    ]));
+
+
     $routeCollector = $app->getRouteCollector();
     $routeCollector->setDefaultInvocationStrategy(new RequestResponseArgs());
 

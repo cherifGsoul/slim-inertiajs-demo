@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from '../components/Link';
-import Header from '../components/Header';
-import Heading from '../components/Heading';
+import Link from '../Components/Link';
+import Header from '../Components/Header';
+import Heading from '../Components/Heading';
 
 export default function Contact(props) {
     return (

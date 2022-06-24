@@ -1,38 +1,25 @@
 <?php declare(strict_types=1);
 
+use App\Providers\ConfigProvider;
+use App\Providers\InertiaFactoryInterfaceProvider;
+use App\Providers\InertiaMiddlewareProvider;
+use App\Providers\LoggerInterfaceProvider;
+use App\Providers\ResponseProvider;
+use App\Providers\RootViewProvider;
+use App\Providers\ViewProvider;
 use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;
-use Cherif\InertiaPsr15\Service\InertiaFactory;
 use Cherif\InertiaPsr15\Service\InertiaFactoryInterface;
-use Cherif\InertiaPsr15\Service\RootViewProviderDecorator;
 use Cherif\InertiaPsr15\Service\RootViewProviderInterface;
-use Laminas\Diactoros\ResponseFactory;
-use Laminas\Diactoros\StreamFactory;
-use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Log\LoggerInterface;
 use Rist\View\View;
 
 return [
-    InertiaMiddleware::class => function (ContainerInterface $container) {
-        return new InertiaMiddleware($container->get(InertiaFactoryInterface::class));
-    },
-    InertiaFactoryInterface::class => function(ContainerInterface $container) {
-        return new InertiaFactory(
-            new ResponseFactory(),
-            new StreamFactory(),
-            $container->get(RootViewProviderInterface::class)
-        );
-    },
-    RootViewProviderInterface::class => function(ContainerInterface $container) {
-        $view = $container->get(View::class);
-        $view->setLayout('layout.php');
-        return new RootViewProviderDecorator([$view, 'renderToString'], 'app.php');
-    },
-    ResponseInterface::class => function(ContainerInterface $container) {
-        return new \Laminas\Diactoros\Response;
-    },
-    View::class => function (ContainerInterface $container) use ($config) {
-        $view = new View($container->get(ResponseInterface::class), $config['views_directory']);
-
-        return $view;
-    }
+    'config' => ConfigProvider::class,
+    InertiaFactoryInterface::class => InertiaFactoryInterfaceProvider::class,
+    InertiaMiddleware::class => InertiaMiddlewareProvider::class,
+    RootViewProviderInterface::class => RootViewProvider::class,
+    ResponseInterface::class => ResponseProvider::class,
+    View::class => ViewProvider::class,
+    LoggerInterface::class => LoggerInterfaceProvider::class
 ];

@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace Rist\Cli;
+namespace Noesis\Cli;
 
 /**
  * Resolver Interface

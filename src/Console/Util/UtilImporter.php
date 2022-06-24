@@ -1,12 +1,12 @@
 <?php
-namespace Rist\Console\Util;
+namespace Noesis\Console\Util;
 
 trait UtilImporter
 {
     /**
      * An instance of the UtilFactory
      *
-     * @var \Rist\Console\Util\UtilFactory $util
+     * @var \Noesis\Console\Util\UtilFactory $util
      */
     protected $util;
 

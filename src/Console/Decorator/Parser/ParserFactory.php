@@ -1,8 +1,8 @@
 <?php
-namespace Rist\Console\Decorator\Parser;
+namespace Noesis\Console\Decorator\Parser;
 
-use Rist\Console\Util\System\System;
-use Rist\Console\Decorator\Tags;
+use Noesis\Console\Util\System\System;
+use Noesis\Console\Decorator\Tags;
 
 class ParserFactory
 {

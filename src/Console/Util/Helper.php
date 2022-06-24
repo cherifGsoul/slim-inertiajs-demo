@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Util;
+namespace Noesis\Console\Util;
 
 class Helper
 {

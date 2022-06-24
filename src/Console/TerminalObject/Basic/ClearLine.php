@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\TerminalObject\Basic;
+namespace Noesis\Console\TerminalObject\Basic;
 
 final class ClearLine extends Repeatable
 {

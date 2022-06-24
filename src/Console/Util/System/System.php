@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Util\System;
+namespace Noesis\Console\Util\System;
 
 abstract class System
 {

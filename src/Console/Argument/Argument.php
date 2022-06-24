@@ -1,7 +1,7 @@
 <?php
-namespace Rist\Console\Argument;
+namespace Noesis\Console\Argument;
 
-use Rist\Console\Exceptions\UnexpectedValueException;
+use Noesis\Console\Exceptions\UnexpectedValueException;
 use function is_array;
 
 class Argument

@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Argument;
+namespace Noesis\Console\Argument;
 
 class Filter
 {

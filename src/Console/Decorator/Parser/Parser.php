@@ -1,7 +1,7 @@
 <?php
-namespace Rist\Console\Decorator\Parser;
+namespace Noesis\Console\Decorator\Parser;
 
-use Rist\Console\Decorator\Tags;
+use Noesis\Console\Decorator\Tags;
 
 abstract class Parser
 {
@@ -16,7 +16,7 @@ abstract class Parser
      * An array of the tags that should be searched for
      * and their corresponding replacements
      *
-     * @var \Rist\Console\Decorator\Tags $tags
+     * @var \Noesis\Console\Decorator\Tags $tags
      */
     public $tags;
 

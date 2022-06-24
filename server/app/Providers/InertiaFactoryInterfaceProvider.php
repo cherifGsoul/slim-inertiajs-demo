@@ -2,7 +2,7 @@
 namespace App\Providers;
 
 use Cherif\InertiaPsr15\Service\RootViewProviderInterface;
-use Rist\ServiceProvider\ServiceProviderInterface;
+use Noesis\ServiceProvider\ServiceProviderInterface;
 use Cherif\InertiaPsr15\Service\InertiaFactory;
 use Laminas\Diactoros\ResponseFactory;
 use Psr\Container\ContainerInterface;

@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Util\Writer;
+namespace Noesis\Console\Util\Writer;
 
 class Buffer implements WriterInterface
 {

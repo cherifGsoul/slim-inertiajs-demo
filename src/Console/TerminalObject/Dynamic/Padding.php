@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic;
+namespace Noesis\Console\TerminalObject\Dynamic;
 
 class Padding extends DynamicTerminalObject
 {
@@ -40,7 +40,7 @@ class Padding extends DynamicTerminalObject
      *
      * @param string $char
      *
-     * @return \Rist\Console\TerminalObject\Dynamic\Padding
+     * @return \Noesis\Console\TerminalObject\Dynamic\Padding
      */
     public function char($char)
     {
@@ -54,7 +54,7 @@ class Padding extends DynamicTerminalObject
      *
      * @param integer $length
      *
-     * @return \Rist\Console\TerminalObject\Dynamic\Padding
+     * @return \Noesis\Console\TerminalObject\Dynamic\Padding
      */
     public function length($length)
     {
@@ -102,7 +102,7 @@ class Padding extends DynamicTerminalObject
      *
      * @param string $content
      *
-     * @return \Rist\Console\TerminalObject\Dynamic\Padding
+     * @return \Noesis\Console\TerminalObject\Dynamic\Padding
      */
     public function label($content)
     {

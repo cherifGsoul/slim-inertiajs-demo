@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic;
+namespace Noesis\Console\TerminalObject\Dynamic;
 
 class Radio extends Checkboxes
 {

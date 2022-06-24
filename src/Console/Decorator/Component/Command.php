@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Decorator\Component;
+namespace Noesis\Console\Decorator\Component;
 
 class Command extends BaseDecorator
 {

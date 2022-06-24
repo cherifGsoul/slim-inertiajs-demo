@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Exceptions;
+namespace Noesis\Console\Exceptions;
 
 class RuntimeException extends \RuntimeException implements Exception
 {

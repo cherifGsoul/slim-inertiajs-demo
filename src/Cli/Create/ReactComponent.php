@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
-namespace Rist\Cli\Create;
+namespace Noesis\Cli\Create;
 
-use Rist\Cli\ResolverInterface;
-use Rist\Console\Console;
+use Noesis\Cli\ResolverInterface;
+use Noesis\Console\Console;
 
 class ReactComponent implements ResolverInterface
 {

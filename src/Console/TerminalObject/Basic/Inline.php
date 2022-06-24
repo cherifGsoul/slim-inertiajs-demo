@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\TerminalObject\Basic;
+namespace Noesis\Console\TerminalObject\Basic;
 
 class Inline extends Out
 {

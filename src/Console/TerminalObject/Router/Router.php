@@ -1,11 +1,11 @@
 <?php
-namespace Rist\Console\TerminalObject\Router;
+namespace Noesis\Console\TerminalObject\Router;
 
-use Rist\Console\Decorator\Parser\ParserImporter;
-use Rist\Console\Settings\Manager;
-use Rist\Console\Settings\SettingsImporter;
-use Rist\Console\Util\OutputImporter;
-use Rist\Console\Util\UtilImporter;
+use Noesis\Console\Decorator\Parser\ParserImporter;
+use Noesis\Console\Settings\Manager;
+use Noesis\Console\Settings\SettingsImporter;
+use Noesis\Console\Util\OutputImporter;
+use Noesis\Console\Util\UtilImporter;
 
 class Router
 {
@@ -14,21 +14,21 @@ class Router
     /**
      * An instance of the Settings Manager class
      *
-     * @var \Rist\Console\Settings\Manager $settings;
+     * @var \Noesis\Console\Settings\Manager $settings;
      */
     protected $settings;
 
     /**
      * An instance of the Dynamic Router class
      *
-     * @var \Rist\Console\TerminalObject\Router\DynamicRouter $dynamic;
+     * @var \Noesis\Console\TerminalObject\Router\DynamicRouter $dynamic;
      */
     protected $dynamic;
 
     /**
      * An instance of the Basic Router class
      *
-     * @var \Rist\Console\TerminalObject\Router\BasicRouter $basic;
+     * @var \Noesis\Console\TerminalObject\Router\BasicRouter $basic;
      */
     protected $basic;
 
@@ -73,7 +73,7 @@ class Router
      * @param string $name
      * @param mixed  $arguments
      *
-     * @return null|\Rist\Console\TerminalObject\Basic\BasicTerminalObjectInterface
+     * @return null|\Noesis\Console\TerminalObject\Basic\BasicTerminalObjectInterface
      */
     public function execute($name, $arguments)
     {
@@ -101,11 +101,11 @@ class Router
     /**
      * Get the object whether it's a string or already instantiated
      *
-     * @param \Rist\Console\TerminalObject\Router\RouterInterface $router
+     * @param \Noesis\Console\TerminalObject\Router\RouterInterface $router
      * @param string $name
      * @param array $arguments
      *
-     * @return \Rist\Console\TerminalObject\Dynamic\DynamicTerminalObjectInterface|\Rist\Console\TerminalObject\Basic\BasicTerminalObjectInterface
+     * @return \Noesis\Console\TerminalObject\Dynamic\DynamicTerminalObjectInterface|\Noesis\Console\TerminalObject\Basic\BasicTerminalObjectInterface
      */
     protected function getObject($router, $name, $arguments)
     {
@@ -127,7 +127,7 @@ class Router
      *
      * @param string $name
      *
-     * @return \Rist\Console\TerminalObject\Router\RouterInterface|null
+     * @return \Noesis\Console\TerminalObject\Router\RouterInterface|null
      */
     protected function getRouter($name)
     {
@@ -143,7 +143,7 @@ class Router
     /**
      * Set the settings property
      *
-     * @param  \Rist\Console\Settings\Manager $settings
+     * @param  \Noesis\Console\Settings\Manager $settings
      *
      * @return Router
      */

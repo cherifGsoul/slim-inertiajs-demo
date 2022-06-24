@@ -1,9 +1,9 @@
 <?php
-namespace Rist\Console\TerminalObject\Basic;
+namespace Noesis\Console\TerminalObject\Basic;
 
-use Rist\Console\Decorator\Parser\ParserImporter;
-use Rist\Console\Settings\SettingsImporter;
-use Rist\Console\Util\UtilImporter;
+use Noesis\Console\Decorator\Parser\ParserImporter;
+use Noesis\Console\Settings\SettingsImporter;
+use Noesis\Console\Util\UtilImporter;
 
 abstract class BasicTerminalObject implements BasicTerminalObjectInterface
 {
@@ -25,7 +25,7 @@ abstract class BasicTerminalObject implements BasicTerminalObjectInterface
     /**
      * Get the parser for the current object
      *
-     * @return \Rist\Console\Decorator\Parser\Parser
+     * @return \Noesis\Console\Decorator\Parser\Parser
      */
     public function getParser()
     {

@@ -1,7 +1,7 @@
 <?php
-namespace Rist\Console\Util\Writer;
+namespace Noesis\Console\Util\Writer;
 
-use Rist\Console\Exceptions\RuntimeException;
+use Noesis\Console\Exceptions\RuntimeException;
 
 class File implements WriterInterface
 {

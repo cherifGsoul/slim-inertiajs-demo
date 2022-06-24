@@ -1,9 +1,9 @@
 <?php
-namespace Rist\Console\Decorator;
+namespace Noesis\Console\Decorator;
 
-use Rist\Console\Decorator\Parser\ParserFactory;
-use Rist\Console\Util\Helper;
-use Rist\Console\Util\System\System;
+use Noesis\Console\Decorator\Parser\ParserFactory;
+use Noesis\Console\Util\Helper;
+use Noesis\Console\Util\System\System;
 
 /**
  * @method void addColor(string $color, integer $code)
@@ -44,7 +44,7 @@ class Style
     public function __construct()
     {
         foreach ($this->available as $key => $class) {
-            $class = 'Rist\Console\Decorator\Component\\' . $class;
+            $class = 'Noesis\Console\Decorator\Component\\' . $class;
             $this->style[$key] = new $class();
         }
     }
@@ -116,9 +116,9 @@ class Style
     /**
      * Get a new instance of the Parser class based on the current settings
      *
-     * @param \Rist\Console\Util\System\System $system
+     * @param \Noesis\Console\Util\System\System $system
      *
-     * @return \Rist\Console\Decorator\Parser\Parser
+     * @return \Noesis\Console\Decorator\Parser\Parser
      */
     public function parser(System $system)
     {

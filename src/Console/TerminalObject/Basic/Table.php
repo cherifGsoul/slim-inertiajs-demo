@@ -1,8 +1,8 @@
 <?php
-namespace Rist\Console\TerminalObject\Basic;
+namespace Noesis\Console\TerminalObject\Basic;
 
-use Rist\Console\Exceptions\InvalidArgumentException;
-use Rist\Console\TerminalObject\Helper\StringLength;
+use Noesis\Console\Exceptions\InvalidArgumentException;
+use Noesis\Console\TerminalObject\Helper\StringLength;
 
 use function array_keys;
 use function count;

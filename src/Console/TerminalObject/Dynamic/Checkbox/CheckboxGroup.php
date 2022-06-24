@@ -1,9 +1,9 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic\Checkbox;
+namespace Noesis\Console\TerminalObject\Dynamic\Checkbox;
 
-use Rist\Console\Decorator\Parser\ParserImporter;
-use Rist\Console\Util\OutputImporter;
-use Rist\Console\Util\UtilImporter;
+use Noesis\Console\Decorator\Parser\ParserImporter;
+use Noesis\Console\Util\OutputImporter;
+use Noesis\Console\Util\UtilImporter;
 
 class CheckboxGroup
 {

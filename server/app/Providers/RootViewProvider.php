@@ -3,8 +3,8 @@ namespace App\Providers;
 
 use Cherif\InertiaPsr15\Service\RootViewProviderDecorator;
 use Psr\Container\ContainerInterface;
-use Rist\ServiceProvider\ServiceProviderInterface;
-use Rist\View\View;
+use Noesis\ServiceProvider\ServiceProviderInterface;
+use Noesis\View\View;
 
 class RootViewProvider implements ServiceProviderInterface
 {

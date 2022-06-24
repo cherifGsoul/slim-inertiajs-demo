@@ -1,7 +1,7 @@
 <?php
-namespace Rist\Console\TerminalObject\Helper;
+namespace Noesis\Console\TerminalObject\Helper;
 
-use Rist\Console\Exceptions\UnexpectedValueException;
+use Noesis\Console\Exceptions\UnexpectedValueException;
 
 use function preg_quote;
 
@@ -41,7 +41,7 @@ trait Art
     /**
      * Import the Art setting (any directories the user added)
      *
-     * @param \Rist\Console\Settings\Art $setting
+     * @param \Noesis\Console\Settings\Art $setting
      */
     public function importSettingArt($setting)
     {

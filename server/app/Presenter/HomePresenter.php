@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 namespace App\Presenter;
 
-use Rist\Presenter\PresenterInterface;
+use Noesis\Presenter\PresenterInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;

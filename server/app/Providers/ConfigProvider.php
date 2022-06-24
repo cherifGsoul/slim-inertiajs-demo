@@ -2,7 +2,7 @@
 namespace App\Providers;
 
 use Psr\Container\ContainerInterface;
-use Rist\ServiceProvider\ServiceProviderInterface;
+use Noesis\ServiceProvider\ServiceProviderInterface;
 
 class ConfigProvider implements ServiceProviderInterface
 {

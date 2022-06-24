@@ -1,7 +1,7 @@
 <?php
-namespace Rist\Console\TerminalObject\Basic;
+namespace Noesis\Console\TerminalObject\Basic;
 
-use Rist\Console\TerminalObject\Helper\StringLength;
+use Noesis\Console\TerminalObject\Helper\StringLength;
 
 class Columns extends BasicTerminalObject
 {

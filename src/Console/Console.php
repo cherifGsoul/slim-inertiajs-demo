@@ -1,14 +1,14 @@
 <?php
-namespace Rist\Console;
+namespace Noesis\Console;
 
-use Rist\Console\Argument\Manager as ArgumentManager;
-use Rist\Console\Decorator\Style;
-use Rist\Console\Settings\Manager as SettingsManager;
-use Rist\Console\TerminalObject\Dynamic\Spinner;
-use Rist\Console\TerminalObject\Router\Router;
-use Rist\Console\Util\Helper;
-use Rist\Console\Util\Output;
-use Rist\Console\Util\UtilFactory;
+use Noesis\Console\Argument\Manager as ArgumentManager;
+use Noesis\Console\Decorator\Style;
+use Noesis\Console\Settings\Manager as SettingsManager;
+use Noesis\Console\TerminalObject\Dynamic\Spinner;
+use Noesis\Console\TerminalObject\Router\Router;
+use Noesis\Console\Util\Helper;
+use Noesis\Console\Util\Output;
+use Noesis\Console\Util\UtilFactory;
 
 /**
  * @method Console black(string $str = null)
@@ -88,42 +88,42 @@ class Console
     /**
      * An instance of the Style class
      *
-     * @var \Rist\Console\Decorator\Style $style
+     * @var \Noesis\Console\Decorator\Style $style
      */
     public $style;
 
     /**
      * An instance of the Terminal Object Router class
      *
-     * @var \Rist\Console\TerminalObject\Router\Router $router
+     * @var \Noesis\Console\TerminalObject\Router\Router $router
      */
     protected $router;
 
     /**
      * An instance of the Settings Manager class
      *
-     * @var \Rist\Console\Settings\Manager $settings
+     * @var \Noesis\Console\Settings\Manager $settings
      */
     protected $settings;
 
     /**
      * An instance of the Argument Manager class
      *
-     * @var \Rist\Console\Argument\Manager $arguments
+     * @var \Noesis\Console\Argument\Manager $arguments
      */
     public $arguments;
 
     /**
      * An instance of the Output class
      *
-     * @var \Rist\Console\Util\Output $output
+     * @var \Noesis\Console\Util\Output $output
      */
     public $output;
 
     /**
      * An instance of the Util Factory
      *
-     * @var \Rist\Console\Util\UtilFactory $util
+     * @var \Noesis\Console\Util\UtilFactory $util
      */
     protected $util;
 
@@ -140,7 +140,7 @@ class Console
     /**
      * Set the style property
      *
-     * @param \Rist\Console\Decorator\Style $style
+     * @param \Noesis\Console\Decorator\Style $style
      */
     public function setStyle(Style $style)
     {
@@ -150,7 +150,7 @@ class Console
     /**
      * Set the router property
      *
-     * @param \Rist\Console\TerminalObject\Router\Router $router
+     * @param \Noesis\Console\TerminalObject\Router\Router $router
      */
     public function setRouter(Router $router)
     {
@@ -160,7 +160,7 @@ class Console
     /**
      * Set the settings property
      *
-     * @param \Rist\Console\Settings\Manager $manager
+     * @param \Noesis\Console\Settings\Manager $manager
      */
     public function setSettingsManager(SettingsManager $manager)
     {
@@ -170,7 +170,7 @@ class Console
     /**
      * Set the arguments property
      *
-     * @param \Rist\Console\Argument\Manager $manager
+     * @param \Noesis\Console\Argument\Manager $manager
      */
     public function setArgumentManager(ArgumentManager $manager)
     {
@@ -180,7 +180,7 @@ class Console
     /**
      * Set the output property
      *
-     * @param \Rist\Console\Util\Output $output
+     * @param \Noesis\Console\Util\Output $output
      */
     public function setOutput(Output $output)
     {
@@ -190,7 +190,7 @@ class Console
     /**
      * Set the util property
      *
-     * @param \Rist\Console\Util\UtilFactory $util
+     * @param \Noesis\Console\Util\UtilFactory $util
      */
     public function setUtil(UtilFactory $util)
     {
@@ -203,7 +203,7 @@ class Console
      * @param string|object|array $class
      * @param string $key Optional custom key instead of class name
      *
-     * @return \Rist\Console\Console
+     * @return \Noesis\Console\Console
      */
     public function extend($class, $key = null)
     {
@@ -215,7 +215,7 @@ class Console
     /**
      * Force ansi support on
      *
-     * @return \Rist\Console\Console
+     * @return \Noesis\Console\Console
      */
     public function forceAnsiOn()
     {
@@ -227,7 +227,7 @@ class Console
     /**
      * Force ansi support off
      *
-     * @return \Rist\Console\Console
+     * @return \Noesis\Console\Console
      */
     public function forceAnsiOff()
     {
@@ -241,7 +241,7 @@ class Console
      *
      * @param string|array $writer
      *
-     * @return \Rist\Console\Console
+     * @return \Noesis\Console\Console
      */
     public function to($writer)
     {
@@ -265,7 +265,7 @@ class Console
      *
      * @param string $description
      *
-     * @return \Rist\Console\Console
+     * @return \Noesis\Console\Console
      */
     public function description(string $description)
     {
@@ -416,7 +416,7 @@ class Console
      * @param string $requested_method
      * @param array  $arguments
      *
-     * @return \Rist\Console\Console|\Rist\Console\TerminalObject\Dynamic\DynamicTerminalObject
+     * @return \Noesis\Console\Console|\Noesis\Console\TerminalObject\Dynamic\DynamicTerminalObject
      *
      * List of many of the possible method being called here
      * documented at the top of this class.

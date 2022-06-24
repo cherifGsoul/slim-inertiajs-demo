@@ -1,8 +1,8 @@
 <?php
-namespace Rist\Console\TerminalObject\Router;
+namespace Noesis\Console\TerminalObject\Router;
 
-use Rist\Console\Util\Helper;
-use Rist\Console\Util\OutputImporter;
+use Noesis\Console\Util\Helper;
+use Noesis\Console\Util\OutputImporter;
 
 class BasicRouter extends BaseRouter
 {
@@ -19,7 +19,7 @@ class BasicRouter extends BaseRouter
     /**
      * Execute a basic terminal object
      *
-     * @param \Rist\Console\TerminalObject\Basic\BasicTerminalObject $obj
+     * @param \Noesis\Console\TerminalObject\Basic\BasicTerminalObject $obj
      * @return void
      */
     public function execute($obj)

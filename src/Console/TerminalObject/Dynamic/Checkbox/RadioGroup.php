@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic\Checkbox;
+namespace Noesis\Console\TerminalObject\Dynamic\Checkbox;
 
 class RadioGroup extends CheckboxGroup
 {

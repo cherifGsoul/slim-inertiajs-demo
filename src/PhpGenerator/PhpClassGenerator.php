@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
-namespace Rist\PhpGenerator;
+namespace Noesis\PhpGenerator;
 
-use Rist\PhpGenerator\Object\Method;
-use Rist\PhpGenerator\Object\Parameter;
+use Noesis\PhpGenerator\Object\Method;
+use Noesis\PhpGenerator\Object\Parameter;
 
 class PhpClassGenerator
 {

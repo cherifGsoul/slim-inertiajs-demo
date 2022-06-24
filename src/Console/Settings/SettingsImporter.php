@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Settings;
+namespace Noesis\Console\Settings;
 
 trait SettingsImporter
 {
@@ -16,7 +16,7 @@ trait SettingsImporter
     /**
      * Import the setting into the class
      *
-     * @param \Rist\Console\Settings\SettingsInterface $setting
+     * @param \Noesis\Console\Settings\SettingsInterface $setting
      */
     public function importSetting($setting)
     {

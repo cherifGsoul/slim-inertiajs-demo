@@ -1,7 +1,7 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic;
+namespace Noesis\Console\TerminalObject\Dynamic;
 
-use Rist\Console\Util\Reader\ReaderInterface;
+use Noesis\Console\Util\Reader\ReaderInterface;
 use function in_array;
 use function strtolower;
 use function substr;

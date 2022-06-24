@@ -1,15 +1,15 @@
 <?php
-namespace Rist\Console\Util;
+namespace Noesis\Console\Util;
 
-use Rist\Console\Util\System\SystemFactory;
-use Rist\Console\Util\System\System;
+use Noesis\Console\Util\System\SystemFactory;
+use Noesis\Console\Util\System\System;
 
 class UtilFactory
 {
     /**
      * A instance of the appropriate System class
      *
-     * @var \Rist\Console\Util\System\System
+     * @var \Noesis\Console\Util\System\System
      */
 
     public $system;
@@ -17,7 +17,7 @@ class UtilFactory
     /**
      * A instance of the Cursor class
      *
-     * @var \Rist\Console\Util\Cursor
+     * @var \Noesis\Console\Util\Cursor
      */
     public $cursor;
 

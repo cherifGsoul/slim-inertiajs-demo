@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace Rist\ServiceProvider;
+namespace Noesis\ServiceProvider;
 
 use Psr\Container\ContainerInterface;
 

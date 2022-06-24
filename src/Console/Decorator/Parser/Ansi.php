@@ -1,7 +1,7 @@
 <?php
-namespace Rist\Console\Decorator\Parser;
+namespace Noesis\Console\Decorator\Parser;
 
-use Rist\Console\Util\Helper;
+use Noesis\Console\Util\Helper;
 
 class Ansi extends Parser
 {

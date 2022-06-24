@@ -1,21 +1,21 @@
 <?php
-namespace Rist\Console\Argument;
+namespace Noesis\Console\Argument;
 
-use Rist\Console\Exceptions\InvalidArgumentException;
+use Noesis\Console\Exceptions\InvalidArgumentException;
 
 class Parser
 {
     /**
      * Filter class to find various types of arguments
      *
-     * @var \Rist\Console\Argument\Filter $filter
+     * @var \Noesis\Console\Argument\Filter $filter
      */
     protected $filter;
 
     /**
      * Summary builder class
      *
-     * @var Rist\Console\Argument\Summary $summary
+     * @var Noesis\Console\Argument\Summary $summary
      */
     protected $summary;
 
@@ -32,7 +32,7 @@ class Parser
      * @param Filter $filter
      * @param Argument[] $arguments
      *
-     * @return Rist\Console\Argument\Parser
+     * @return Noesis\Console\Argument\Parser
      */
     public function setFilter($filter, $arguments)
     {

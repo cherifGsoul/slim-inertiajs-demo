@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace Rist\App\Router;
+namespace Noesis\App\Router;
 
 use Slim\App;
 use Slim\Routing\RouteCollectorProxy;

@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Psr\Container\ContainerInterface;
-use Rist\ServiceProvider\ServiceProviderInterface;
+use Noesis\ServiceProvider\ServiceProviderInterface;
 
 class ResponseProvider implements ServiceProviderInterface
 {

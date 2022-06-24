@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Util\System;
+namespace Noesis\Console\Util\System;
 
 class Windows extends System
 {

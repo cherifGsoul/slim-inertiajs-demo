@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Settings;
+namespace Noesis\Console\Settings;
 
 class Manager
 {
@@ -66,7 +66,7 @@ class Manager
      */
     protected function getPath($name)
     {
-        return 'Rist\Console\Settings\\' . $this->getClassName($name);
+        return 'Noesis\Console\Settings\\' . $this->getClassName($name);
     }
 
     /**

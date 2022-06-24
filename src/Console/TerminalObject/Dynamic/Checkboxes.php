@@ -1,8 +1,8 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic;
+namespace Noesis\Console\TerminalObject\Dynamic;
 
-use Rist\Console\Util\Reader\ReaderInterface;
-use Rist\Console\Util\Reader\Stdin;
+use Noesis\Console\Util\Reader\ReaderInterface;
+use Noesis\Console\Util\Reader\Stdin;
 
 class Checkboxes extends InputAbstract
 {

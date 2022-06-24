@@ -1,8 +1,8 @@
 <?php
-namespace Rist\Console\TerminalObject\Basic;
+namespace Noesis\Console\TerminalObject\Basic;
 
-use Rist\Console\Decorator\Parser\Parser;
-use Rist\Console\Util\UtilFactory;
+use Noesis\Console\Decorator\Parser\Parser;
+use Noesis\Console\Util\UtilFactory;
 
 interface BasicTerminalObjectInterface
 {
@@ -22,7 +22,7 @@ interface BasicTerminalObjectInterface
     public function sameLine();
 
     /**
-     * @param \Rist\Console\Decorator\Parser\Parser $parser
+     * @param \Noesis\Console\Decorator\Parser\Parser $parser
      */
     public function parser(Parser $parser);
 

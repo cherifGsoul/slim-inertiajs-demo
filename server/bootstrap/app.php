@@ -2,10 +2,10 @@
 
 require_once dirname(dirname(__DIR__)) . '/vendor/autoload.php';
 
-use Rist\App\Container\ContainerInvoker;
-use Rist\App\Middleware\AppMiddlewareInvoker;
-use Rist\App\Router\ApiRouterInvoker;
-use Rist\App\Router\WebRouterInvoker;
+use Noesis\App\Container\ContainerInvoker;
+use Noesis\App\Middleware\AppMiddlewareInvoker;
+use Noesis\App\Router\ApiRouterInvoker;
+use Noesis\App\Router\WebRouterInvoker;
 use Slim\Factory\AppFactory;
 
 $app = AppFactory::createFromContainer((new ContainerInvoker)());

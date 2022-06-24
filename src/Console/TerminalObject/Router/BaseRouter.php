@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\TerminalObject\Router;
+namespace Noesis\Console\TerminalObject\Router;
 
 abstract class BaseRouter implements RouterInterface
 {
@@ -52,7 +52,7 @@ abstract class BaseRouter implements RouterInterface
      */
     protected function getPath($class)
     {
-        return 'Rist\Console\TerminalObject\\' . $this->pathPrefix() . '\\' . $class;
+        return 'Noesis\Console\TerminalObject\\' . $this->pathPrefix() . '\\' . $class;
     }
 
     /**

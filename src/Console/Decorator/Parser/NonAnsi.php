@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Decorator\Parser;
+namespace Noesis\Console\Decorator\Parser;
 
 class NonAnsi extends Parser
 {

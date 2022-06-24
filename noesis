@@ -1,11 +1,11 @@
 #!/usr/bin/env php
 <?php declare(strict_types=1);
 
-use Rist\Cli\Cli;
+use Noesis\Cli\Cli;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$Console = new \Rist\Console\Console;
+$Console = new \Noesis\Console\Console;
 
 Cli::createFrom($argv, [
     'help' => [

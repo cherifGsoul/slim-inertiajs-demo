@@ -4,7 +4,7 @@ namespace App\Providers;
 use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;
 use Cherif\InertiaPsr15\Service\InertiaFactoryInterface;
 use Psr\Container\ContainerInterface;
-use Rist\ServiceProvider\ServiceProviderInterface;
+use Noesis\ServiceProvider\ServiceProviderInterface;
 
 class InertiaMiddlewareProvider implements ServiceProviderInterface
 {

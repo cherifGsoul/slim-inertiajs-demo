@@ -1,17 +1,17 @@
 {
-    "name": "luke-watts/slimphp-inertiajs-react",
-    "description": "Slim Framework (v4) with Twig templates, InertiaJS and React (v18)",
+    "name": "luke-watts/noesis-framework",
+    "description": "Noesis Framework: Slim PHP (v4) with InertiaJS, React (v18) and TailwindCSS front-ends for robust SPAs with less API requests",
     "licence": "MIT",
     "autoload": {
         "psr-4": {
-            "Rist\\": "src/",
+            "Noesis\\": "src/",
             "App\\": "server/app"
         }
     },
     "authors": [
         {
             "name": "Luke Watts",
-            "email": "watts.luke@yahoo.com"
+            "email": "watts.luke85@gmail.com"
         }
     ],
     "require": {

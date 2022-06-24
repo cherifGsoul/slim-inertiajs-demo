@@ -1,7 +1,7 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic;
+namespace Noesis\Console\TerminalObject\Dynamic;
 
-use Rist\Console\Exceptions\UnexpectedValueException;
+use Noesis\Console\Exceptions\UnexpectedValueException;
 
 class Progress extends DynamicTerminalObject
 {

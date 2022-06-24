@@ -1,7 +1,7 @@
 <?php
-namespace Rist\Console\Util\Reader;
+namespace Noesis\Console\Util\Reader;
 
-use Rist\Console\Exceptions\RuntimeException;
+use Noesis\Console\Exceptions\RuntimeException;
 use Seld\CliPrompt\CliPrompt;
 
 class Stdin implements ReaderInterface

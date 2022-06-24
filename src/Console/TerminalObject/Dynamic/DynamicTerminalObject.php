@@ -1,10 +1,10 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic;
+namespace Noesis\Console\TerminalObject\Dynamic;
 
-use Rist\Console\Decorator\Parser\ParserImporter;
-use Rist\Console\Settings\SettingsImporter;
-use Rist\Console\Util\OutputImporter;
-use Rist\Console\Util\UtilImporter;
+use Noesis\Console\Decorator\Parser\ParserImporter;
+use Noesis\Console\Settings\SettingsImporter;
+use Noesis\Console\Util\OutputImporter;
+use Noesis\Console\Util\UtilImporter;
 
 /**
  * The dynamic terminal object doesn't adhere to the basic terminal object

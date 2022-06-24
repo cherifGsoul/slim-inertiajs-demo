@@ -1,6 +1,6 @@
 <?php
 
-namespace Rist\Console;
+namespace Noesis\Console;
 
 use Psr\Log\AbstractLogger;
 use Psr\Log\InvalidArgumentException;
@@ -35,7 +35,7 @@ class Logger extends AbstractLogger
     private $level;
 
     /**
-     * @var Rist\Console $climate The underlying climate instance we are using for output.
+     * @var Noesis\Console $climate The underlying climate instance we are using for output.
      */
     private $climate;
 
@@ -43,7 +43,7 @@ class Logger extends AbstractLogger
      * Create a new Logger instance.
      *
      * @param string $level One of the LogLevel constants
-     * @param Rist\Console $climate An existing CLImate instance to use for output
+     * @param Noesis\Console $climate An existing CLImate instance to use for output
      */
     public function __construct($level = LogLevel::INFO, Console $climate = null)
     {

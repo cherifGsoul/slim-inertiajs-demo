@@ -12,7 +12,7 @@ use Cherif\InertiaPsr15\Service\InertiaFactoryInterface;
 use Cherif\InertiaPsr15\Service\RootViewProviderInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Log\LoggerInterface;
-use Rist\View\View;
+use Noesis\View\View;
 
 return [
     'config' => ConfigProvider::class,

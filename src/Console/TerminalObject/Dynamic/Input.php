@@ -1,8 +1,8 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic;
+namespace Noesis\Console\TerminalObject\Dynamic;
 
-use Rist\Console\Util\Reader\ReaderInterface;
-use Rist\Console\Util\Reader\Stdin;
+use Noesis\Console\Util\Reader\ReaderInterface;
+use Noesis\Console\Util\Reader\Stdin;
 
 class Input extends InputAbstract
 {
@@ -75,7 +75,7 @@ class Input extends InputAbstract
      * @param  array|object $acceptable
      * @param  boolean $show
      *
-     * @return \Rist\Console\TerminalObject\Dynamic\Input
+     * @return \Noesis\Console\TerminalObject\Dynamic\Input
      */
     public function accept($acceptable, $show = false)
     {
@@ -88,7 +88,7 @@ class Input extends InputAbstract
     /**
      * Define whether we should be strict about exact responses
      *
-     * @return \Rist\Console\TerminalObject\Dynamic\Input
+     * @return \Noesis\Console\TerminalObject\Dynamic\Input
      */
     public function strict()
     {
@@ -102,7 +102,7 @@ class Input extends InputAbstract
      *
      * @param string $default
      *
-     * @return \Rist\Console\TerminalObject\Dynamic\Input
+     * @return \Noesis\Console\TerminalObject\Dynamic\Input
      */
     public function defaultTo($default)
     {
@@ -114,7 +114,7 @@ class Input extends InputAbstract
     /**
      * Set multiline input to true
      *
-     * @return \Rist\Console\TerminalObject\Dynamic\Input
+     * @return \Noesis\Console\TerminalObject\Dynamic\Input
      */
     public function multiLine()
     {

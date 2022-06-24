@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
-namespace Rist\App\Container;
+namespace Noesis\App\Container;
 
 use DI\ContainerBuilder;
 use Psr\Container\ContainerInterface;
-use Rist\App\ServiceProvider\ServiceProvidersInvoker;
+use Noesis\App\ServiceProvider\ServiceProvidersInvoker;
 
 class ContainerInvoker
 {

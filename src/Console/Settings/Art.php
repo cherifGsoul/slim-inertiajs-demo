@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Settings;
+namespace Noesis\Console\Settings;
 
 class Art implements SettingsInterface
 {

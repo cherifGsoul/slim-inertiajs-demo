@@ -1,21 +1,21 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic;
+namespace Noesis\Console\TerminalObject\Dynamic;
 
-use Rist\Console\TerminalObject\Dynamic\Animation\Keyframe;
-use Rist\Console\TerminalObject\Helper\Art;
-use Rist\Console\TerminalObject\Helper\Sleeper;
+use Noesis\Console\TerminalObject\Dynamic\Animation\Keyframe;
+use Noesis\Console\TerminalObject\Helper\Art;
+use Noesis\Console\TerminalObject\Helper\Sleeper;
 
 class Animation extends DynamicTerminalObject
 {
     use Art;
 
     /**
-     * @var \Rist\Console\TerminalObject\Helper\Sleeper $sleeper
+     * @var \Noesis\Console\TerminalObject\Helper\Sleeper $sleeper
      */
     protected $sleeper;
 
     /**
-     * @var \Rist\Console\TerminalObject\Dynamic\Animation\Keyframe $keyframes
+     * @var \Noesis\Console\TerminalObject\Dynamic\Animation\Keyframe $keyframes
      */
     protected $keyframes;
 
@@ -51,7 +51,7 @@ class Animation extends DynamicTerminalObject
      *
      * @param int|float $percentage
      *
-     * @return \Rist\Console\TerminalObject\Dynamic\Animation
+     * @return \Noesis\Console\TerminalObject\Dynamic\Animation
      */
     public function speed($percentage)
     {
@@ -125,7 +125,7 @@ class Animation extends DynamicTerminalObject
     }
 
     /**
-     * @param \Rist\Console\TerminalObject\Helper\Sleeper $sleeper
+     * @param \Noesis\Console\TerminalObject\Helper\Sleeper $sleeper
      */
     protected function setSleeper($sleeper = null)
     {
@@ -133,7 +133,7 @@ class Animation extends DynamicTerminalObject
     }
 
     /**
-     * @param Rist\Console\TerminalObject\Dynamic\Animation\Keyframe $keyframes
+     * @param Noesis\Console\TerminalObject\Dynamic\Animation\Keyframe $keyframes
      */
     protected function setKeyFrames($keyframes)
     {

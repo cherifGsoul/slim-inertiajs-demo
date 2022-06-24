@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Exceptions;
+namespace Noesis\Console\Exceptions;
 
 interface Exception
 {

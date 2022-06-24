@@ -1,10 +1,10 @@
 <?php
-namespace Rist\Console\Util\System;
+namespace Noesis\Console\Util\System;
 
 class SystemFactory
 {
     /**
-     * @var \Rist\Console\Util\System\System $instance
+     * @var \Noesis\Console\Util\System\System $instance
      */
 
     protected static $instance;
@@ -12,7 +12,7 @@ class SystemFactory
     /**
      * Get an instance of the appropriate System class
      *
-     * @return \Rist\Console\Util\System\System
+     * @return \Noesis\Console\Util\System\System
      */
 
     public static function getInstance()
@@ -29,7 +29,7 @@ class SystemFactory
     /**
      * Set the $instance property to the appropriate system
      *
-     * @return \Rist\Console\Util\System\System
+     * @return \Noesis\Console\Util\System\System
      */
 
     protected static function getSystem()

@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace Rist\App\Middleware;
+namespace Noesis\App\Middleware;
 
 use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;
 use Zeuxisoo\Whoops\Slim\WhoopsMiddleware;

@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Decorator;
+namespace Noesis\Console\Decorator;
 
 class Tags
 {

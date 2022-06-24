@@ -1,8 +1,8 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic;
+namespace Noesis\Console\TerminalObject\Dynamic;
 
-use Rist\Console\Util\Reader\ReaderInterface;
-use Rist\Console\Util\Reader\Stdin;
+use Noesis\Console\Util\Reader\ReaderInterface;
+use Noesis\Console\Util\Reader\Stdin;
 
 abstract class InputAbstract extends DynamicTerminalObject
 {
@@ -16,7 +16,7 @@ abstract class InputAbstract extends DynamicTerminalObject
     /**
      * An instance of ReaderInterface
      *
-     * @var \Rist\Console\Util\Reader\ReaderInterface $reader
+     * @var \Noesis\Console\Util\Reader\ReaderInterface $reader
      */
     protected $reader;
 

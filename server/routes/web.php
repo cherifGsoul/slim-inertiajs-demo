@@ -4,7 +4,7 @@ use App\Presenter\HomePresenter;
 use App\Presenter\ContactPresenter;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface as Response;
-use Rist\View\View;
+use Noesis\View\View;
 
 $route->get('/', HomePresenter::class);
 

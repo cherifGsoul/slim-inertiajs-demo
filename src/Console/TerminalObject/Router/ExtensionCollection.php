@@ -1,9 +1,9 @@
 <?php
-namespace Rist\Console\TerminalObject\Router;
+namespace Noesis\Console\TerminalObject\Router;
 
-use Rist\Console\Exceptions\InvalidArgumentException;
-use Rist\Console\Exceptions\UnexpectedValueException;
-use Rist\Console\Util\Helper;
+use Noesis\Console\Exceptions\InvalidArgumentException;
+use Noesis\Console\Exceptions\UnexpectedValueException;
+use Noesis\Console\Util\Helper;
 
 class ExtensionCollection
 {
@@ -15,12 +15,12 @@ class ExtensionCollection
     /**
      * @var string $basic_interface
      */
-    protected $basic_interface = 'Rist\Console\TerminalObject\Basic\BasicTerminalObjectInterface';
+    protected $basic_interface = 'Noesis\Console\TerminalObject\Basic\BasicTerminalObjectInterface';
 
     /**
      * @var string $dynamic_interface
      */
-    protected $dynamic_interface = 'Rist\Console\TerminalObject\Dynamic\DynamicTerminalObjectInterface';
+    protected $dynamic_interface = 'Noesis\Console\TerminalObject\Dynamic\DynamicTerminalObjectInterface';
 
     public function __construct($key, $class)
     {

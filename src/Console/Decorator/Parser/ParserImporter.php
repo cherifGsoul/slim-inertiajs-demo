@@ -1,19 +1,19 @@
 <?php
-namespace Rist\Console\Decorator\Parser;
+namespace Noesis\Console\Decorator\Parser;
 
 trait ParserImporter
 {
     /**
      * An instance of the Parser class
      *
-     * @var \Rist\Console\Decorator\Parser\Parser $parser
+     * @var \Noesis\Console\Decorator\Parser\Parser $parser
      */
     protected $parser;
 
     /**
      * Import the parser and set the property
      *
-     * @param \Rist\Console\Decorator\Parser\Parser $parser
+     * @param \Noesis\Console\Decorator\Parser\Parser $parser
      */
     public function parser(Parser $parser)
     {

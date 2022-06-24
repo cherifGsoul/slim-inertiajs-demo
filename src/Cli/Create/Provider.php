@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
-namespace Rist\Cli\Create;
+namespace Noesis\Cli\Create;
 
-use Rist\Cli\ResolverInterface;
-use Rist\Console\Console;
-use Rist\PhpGenerator\Object\Method;
-use Rist\PhpGenerator\Object\Parameter;
-use Rist\PhpGenerator\PhpClassGenerator;
+use Noesis\Cli\ResolverInterface;
+use Noesis\Console\Console;
+use Noesis\PhpGenerator\Object\Method;
+use Noesis\PhpGenerator\Object\Parameter;
+use Noesis\PhpGenerator\PhpClassGenerator;
 
 class Provider implements ResolverInterface
 {
@@ -35,7 +35,7 @@ class Provider implements ResolverInterface
         $class_name = "{$name}Provider";
         $ClassGenerator = new PhpClassGenerator($class_name);
         $ClassGenerator->setNamespace('App\Providers');
-        $ClassGenerator->addImplements('\Rist\ServiceProvider\ServiceProviderInterface');
+        $ClassGenerator->addImplements('\Noesis\ServiceProvider\ServiceProviderInterface');
         $ClassGenerator->addUseStatement('Psr\Container\ContainerInterface');
         $body = "return new \stdClass;";
         $ClassGenerator->addMethod(

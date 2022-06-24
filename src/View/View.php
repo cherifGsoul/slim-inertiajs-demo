@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace Rist\View;
+namespace Noesis\View;
 
 use Psr\Http\Message\ResponseInterface;
 use Slim\Views\PhpRenderer;

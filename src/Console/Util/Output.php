@@ -1,9 +1,9 @@
 <?php
-namespace Rist\Console\Util;
+namespace Noesis\Console\Util;
 
-use Rist\Console\Exceptions\InvalidArgumentException;
-use Rist\Console\Exceptions\UnexpectedValueException;
-use Rist\Console\Util\Writer\WriterInterface;
+use Noesis\Console\Exceptions\InvalidArgumentException;
+use Noesis\Console\Exceptions\UnexpectedValueException;
+use Noesis\Console\Util\Writer\WriterInterface;
 
 class Output
 {
@@ -69,7 +69,7 @@ class Output
      * @param string $key
      * @param WriterInterface|array $writer
      *
-     * @return \Rist\Console\Util\Output
+     * @return \Noesis\Console\Util\Output
      */
     public function add($key, $writer)
     {
@@ -103,7 +103,7 @@ class Output
      *
      * @param string|array $keys
      *
-     * @return \Rist\Console\Util\Output
+     * @return \Noesis\Console\Util\Output
      */
     public function once($keys)
     {
@@ -117,7 +117,7 @@ class Output
      *
      * @param bool $persist
      *
-     * @return \Rist\Console\Util\Output
+     * @return \Noesis\Console\Util\Output
      */
     public function persist($persist = true)
     {
@@ -251,7 +251,7 @@ class Output
         // let's at least try and give a helpful error message
         if (is_object($writer)) {
             throw new InvalidArgumentException('Class [' . get_class($writer) . '] must implement '
-                                    . 'Rist\Console\Util\Writer\WriterInterface.');
+                                    . 'Noesis\Console\Util\Writer\WriterInterface.');
         }
 
         // No idea, just tell them we can't resolve it

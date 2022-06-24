@@ -1,10 +1,10 @@
 <?php
-namespace Rist\Console\Argument;
+namespace Noesis\Console\Argument;
 
 class Summary
 {
     /**
-     * @var \Rist\Console\Console $console
+     * @var \Noesis\Console\Console $console
      */
     protected $console;
 
@@ -24,11 +24,11 @@ class Summary
     protected $filter;
 
     /**
-     * @param \Rist\Console\Console $console
+     * @param \Noesis\Console\Console $console
      *
-     * @return \Rist\Console\Argument\Summary
+     * @return \Noesis\Console\Argument\Summary
      */
-    public function setConsole(\Rist\Console\Console $console)
+    public function setConsole(\Noesis\Console\Console $console)
     {
         $this->console = $console;
 
@@ -38,7 +38,7 @@ class Summary
     /**
      * @param string $description
      *
-     * @return \Rist\Console\Argument\Summary
+     * @return \Noesis\Console\Argument\Summary
      */
     public function setDescription($description)
     {
@@ -50,7 +50,7 @@ class Summary
     /**
      * @param string $command
      *
-     * @return \Rist\Console\Argument\Summary
+     * @return \Noesis\Console\Argument\Summary
      */
     public function setCommand($command)
     {
@@ -63,7 +63,7 @@ class Summary
      * @param Filter $filter
      * @param Argument[] $arguments
      *
-     * @return \Rist\Console\Argument\Summary
+     * @return \Noesis\Console\Argument\Summary
      */
     public function setFilter($filter, $arguments)
     {

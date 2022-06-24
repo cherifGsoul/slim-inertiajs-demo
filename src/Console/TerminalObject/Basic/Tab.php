@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\TerminalObject\Basic;
+namespace Noesis\Console\TerminalObject\Basic;
 
 /**
  * Tab class to enable tabs to be output without using the escape character.

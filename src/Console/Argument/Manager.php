@@ -1,7 +1,7 @@
 <?php
-namespace Rist\Console\Argument;
+namespace Noesis\Console\Argument;
 
-use Rist\Console\Exceptions\InvalidArgumentException;
+use Noesis\Console\Exceptions\InvalidArgumentException;
 
 class Manager
 {
@@ -22,21 +22,21 @@ class Manager
     /**
      * Filter class to find various types of arguments
      *
-     * @var \Rist\Console\Argument\Filter $filter
+     * @var \Noesis\Console\Argument\Filter $filter
      */
     protected $filter;
 
     /**
      * Summary builder class
      *
-     * @var \Rist\Console\Argument\Summary $summary
+     * @var \Noesis\Console\Argument\Summary $summary
      */
     protected $summary;
 
     /**
      * Argument parser class
      *
-     * @var \Rist\Console\Argument\Parser $parser
+     * @var \Noesis\Console\Argument\Parser $parser
      */
     protected $parser;
 
@@ -212,10 +212,10 @@ class Manager
     /**
      * Output a script's usage statement.
      *
-     * @param \Rist\Console\Console $console
+     * @param \Noesis\Console\Console $console
      * @param array $argv
      */
-    public function usage(\Rist\Console\Console $console, array $argv = null)
+    public function usage(\Noesis\Console\Console $console, array $argv = null)
     {
         $this->summary
                 ->setConsole($console)

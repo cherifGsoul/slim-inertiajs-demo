@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\Util\Reader;
+namespace Noesis\Console\Util\Reader;
 
 interface ReaderInterface
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\TerminalObject\Helper;
+namespace Noesis\Console\TerminalObject\Helper;
 
 class Sleeper implements SleeperInterface
 {

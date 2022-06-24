@@ -1,8 +1,8 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic;
+namespace Noesis\Console\TerminalObject\Dynamic;
 
-use Rist\Console\Decorator\Parser\Parser;
-use Rist\Console\Util\UtilFactory;
+use Noesis\Console\Decorator\Parser\Parser;
+use Noesis\Console\Util\UtilFactory;
 
 interface DynamicTerminalObjectInterface
 {
@@ -15,7 +15,7 @@ interface DynamicTerminalObjectInterface
     public function importSetting($setting);
 
     /**
-     * @param \Rist\Console\Decorator\Parser\Parser $parser
+     * @param \Noesis\Console\Decorator\Parser\Parser $parser
      */
     public function parser(Parser $parser);
 

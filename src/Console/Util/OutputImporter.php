@@ -1,12 +1,12 @@
 <?php
-namespace Rist\Console\Util;
+namespace Noesis\Console\Util;
 
 trait OutputImporter
 {
     /**
      * An instance of the OutputFactory
      *
-     * @var \Rist\Console\Util\Output $output
+     * @var \Noesis\Console\Util\Output $output
      */
     protected $output;
 

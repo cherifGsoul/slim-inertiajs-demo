@@ -1,9 +1,9 @@
 <?php
-namespace Rist\Console\TerminalObject\Dynamic\Animation;
+namespace Noesis\Console\TerminalObject\Dynamic\Animation;
 
-use Rist\Console\Decorator\Parser\ParserImporter;
-use Rist\Console\TerminalObject\Helper\StringLength;
-use Rist\Console\Util\UtilImporter;
+use Noesis\Console\Decorator\Parser\ParserImporter;
+use Noesis\Console\TerminalObject\Helper\StringLength;
+use Noesis\Console\Util\UtilImporter;
 
 class Keyframe
 {

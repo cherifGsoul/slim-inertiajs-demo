@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
-namespace Rist\Cli;
+namespace Noesis\Cli;
 
-use Rist\Console\Console;
+use Noesis\Console\Console;
 
 /**
  * @method void createPresenter(Console $Console, string $to_make)
@@ -51,8 +51,8 @@ class Cli
      */
     public static function intro()
     {
-        self::$instance->white('RITS Framework')->green('0.1.0');
-        self::$instance->description("RITS (React, InertiaJS, Tailwind, Slim) is a fully extensible framework with easy SPA routing using InertiaJS");
+        self::$instance->white('Noesis Framework')->green('0.1.0');
+        self::$instance->description("Noesis (React, InertiaJS, Tailwind, Slim) is a fully extensible framework with easy SPA routing using InertiaJS");
         self::$instance->br();
     }
 
@@ -63,7 +63,7 @@ class Cli
 
     public static function displayUsage()
     {
-        self::$instance->animation('rits-framework')->enterFrom('top');
+        self::$instance->animation('noesis.slant')->enterFrom('top');
         self::$instance->usage();
         self::$instance->br();
     }
@@ -74,7 +74,7 @@ class Cli
         self::$instance->green('help');
         $Padding = self::$instance->padding(10);
         self::$instance->tab();
-        $Padding->label('help')->result('Display help documentation for the RITS Console');
+        $Padding->label('help')->result('Display help documentation for the Noesis Console');
     }
 
     public static function unknownCommandError()
@@ -119,7 +119,7 @@ class Cli
         $folder = ucfirst($matches[1]);
         $class_name = $matches[2];
         
-        $fully_qualified_name = "\\Rist\\Cli\\$folder\\$class_name";
+        $fully_qualified_name = "\\Noesis\\Cli\\$folder\\$class_name";
         if (!class_exists($fully_qualified_name)) {
             self::$instance->error('Could not resolve a class for $method. Confirm the namespace and className are correct');
         }

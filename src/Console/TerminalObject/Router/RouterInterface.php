@@ -1,5 +1,5 @@
 <?php
-namespace Rist\Console\TerminalObject\Router;
+namespace Noesis\Console\TerminalObject\Router;
 
 interface RouterInterface
 {
@@ -17,7 +17,7 @@ interface RouterInterface
 
     /**
      * @param $obj
-     * @return null|\Rist\Console\TerminalObject\Dynamic\DynamicTerminalObject
+     * @return null|\Noesis\Console\TerminalObject\Dynamic\DynamicTerminalObject
      */
     public function execute($obj);
 

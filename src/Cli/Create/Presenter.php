@@ -1,14 +1,10 @@
 <?php declare(strict_types=1);
-namespace Rist\Cli\Create;
+namespace Noesis\Cli\Create;
 
-use Nette\PhpGenerator\PhpFile;
-use Nette\PhpGenerator\ClassType;
-use Nette\PhpGenerator\PhpNamespace;
-use Rist\Cli\ResolverInterface;
-use Rist\Console\Console;
-use Rist\PhpGenerator\Object\Parameter;
-use Rist\PhpGenerator\PhpClassGenerator;
-use Symfony\Component\Filesystem\Filesystem;
+use Noesis\Cli\ResolverInterface;
+use Noesis\Console\Console;
+use Noesis\PhpGenerator\Object\Parameter;
+use Noesis\PhpGenerator\PhpClassGenerator;
 
 /**
  * Presenter
@@ -45,7 +41,7 @@ class Presenter implements ResolverInterface
 
         $ClassGenerator = new PhpClassGenerator($class_name);
         $output = $ClassGenerator->setNamespace('App\Presenter')
-            ->addUseStatement('Rist\Presenter\PresenterInterface')
+            ->addUseStatement('Noesis\Presenter\PresenterInterface')
             ->addUseStatement('Psr\Http\Message\ServerRequestInterface')
             ->addUseStatement('Psr\Http\Message\ResponseInterface')
             ->addUseStatement('Cherif\InertiaPsr15\Middleware\InertiaMiddleware')

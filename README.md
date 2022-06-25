@@ -16,6 +16,10 @@ The aim of this project will be to allow developers to have everything for a ful
 
 Clone
 
+_NOTE:  
+`composer create-project noesis-framework` will be available once the framework is mature in v1.0
+For now, cloning is the only method to install_
+
 ```bash
 git clone https://github.com/lukewatts/noesis-framework.git
 ```

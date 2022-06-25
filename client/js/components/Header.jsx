@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from '../components/Link';
 import { Link as InertiaLink }  from '@inertiajs/inertia-react';
 
 export default function Header()
@@ -8,7 +7,7 @@ export default function Header()
 <div class="mx-auto px-4 sm:px-6 border-b-2 border-gray-100">
     <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
-        <InertiaLink href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">Noesis Framework v0.1</InertiaLink>
+        <InertiaLink href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">Noesis Framework</InertiaLink>
         </div>
         
         <nav class="hidden md:flex space-x-10">

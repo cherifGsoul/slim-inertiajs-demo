@@ -57,37 +57,37 @@ php -S localhost:80 -t public
 
 ## Console
 
-Noesis has console commands (like most other frameworks)
+Noesis has console commands (like most other frameworks) called 'noe' (pronounced 'know')
 
-### php noesis list
+### php noe list
 
 List all available command
 
-### php noesis help
+### php noe help
 
 Show help documentation for Noesis console
 
-### php noesis pest
+### php noe pest
 
 Run all Pest tests
 
-### php noesis pest:init
+### php noe pest:init
 
 Initialize all pest files. Run this to setup tests folder in a new project
 
-### php noesis pest:cover
+### php noe pest:cover
 
 Run all Pest tests with code coverage. Requires XDEBUG with env variable XDEBUG_MODE=coverage
 
 __NOTE:__ Windows users should use Powershell or CMD to run this command. Git Bash will not output correctly on windows for some reason (something to do with the php passtrhru() function perhaps). If you are using Git Bash, you can still use `/vendor/bin/pest --coverage` without any issues.
 
-### php noesis create:presenter --name {presenter_name}
+### php noe create:presenter {presenter_name}
 
 Generates a boilerplate Presenter class in `server/app/Presenter`
 
 Example:
 
-`php noesis create:presenter --name Test` will generate TestPresenter in `server/app/Presenter` which have the following boilerplate code:
+`php noesis create:presenter Test` will generate TestPresenter in `server/app/Presenter` which have the following boilerplate code:
 
 ```php
 <?php
@@ -113,14 +113,14 @@ class TestPresenter extends \Noesis\Presenter\Presenter
 }
 ```
 
-### php create:provider --name {provider_name}
+### php noe create:provider {provider_name}
 
 Generates a boilerplate Provider class in `server/app/Providers`
 
-### php create:react-page --name {page_name}
+### php noe create:react-page {page_name}
 
 Generates boilerplate React page in client/js/Pages
 
-### php create:react-component --name {component_name}
+### php noe create:react-component {component_name}
 
 Generates boilerplate React component in client/js/Components

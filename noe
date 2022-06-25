@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+use Noesis\Command\Commands\Create\CreateCommandsInvoker;
+use Noesis\Command\Commands\Pest\PestCommandsInvoker;
+use Symfony\Component\Console\Application;
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+$application = new Application('Noesis Framework', '0.3.0');
+
+$application = (new CreateCommandsInvoker)($application);
+$application = (new PestCommandsInvoker)($application);
+
+$application->run();

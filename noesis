@@ -22,7 +22,7 @@ Cli::createFrom($argv, [
     ]
 ]);
 
-Cli::setVersion('0.2.0');
+Cli::setVersion('0.2.1');
 
 Cli::intro();
 

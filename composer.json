@@ -22,7 +22,15 @@
         "slim/slim": "4.*",
         "slim/php-view": "^3.1",
         "zeuxisoo/slim-whoops": "^0.7.3",
-        "monolog/monolog": "^3.1",
+        "monolog/monolog": "^3.1"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.21",
         "maximebf/debugbar": "^1.18"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }

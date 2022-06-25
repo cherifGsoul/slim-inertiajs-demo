@@ -63,6 +63,20 @@ List all available command
 
 Show help documentation for Noesis console
 
+### php noesis pest
+
+Run all Pest tests
+
+### php noesis pest:init
+
+Initialize all pest files. Run this to setup tests folder in a new project
+
+### php noesis pest:cover
+
+Run all Pest tests with code coverage. Requires XDEBUG with env variable XDEBUG_MODE=coverage
+
+__NOTE:__ Windows users should use Powershell or CMD to run this command. Git Bash will not output correctly on windows for some reason (something to do with the php passtrhru() function perhaps). If you are using Git Bash, you can still use `/vendor/bin/pest --coverage` without any issues.
+
 ### php noesis create:presenter --name {presenter_name}
 
 Generates a boilerplate Presenter class in `server/app/Presenter`
@@ -94,3 +108,15 @@ class TestPresenter extends \Noesis\Presenter\Presenter
     }
 }
 ```
+
+### php create:provider --name {provider_name}
+
+Generates a boilerplate Provider class in `server/app/Providers`
+
+### php create:react-page --name {page_name}
+
+Generates boilerplate React page in client/js/Pages
+
+### php create:react-component --name {component_name}
+
+Generates boilerplate React component in client/js/Components

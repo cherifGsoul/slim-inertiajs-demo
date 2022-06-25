@@ -26,6 +26,13 @@ class Cli
     private static array $argv;
 
     /**
+     * Version
+     *
+     * @var string
+     */
+    private static string $version;
+
+    /**
      * Arguments
      *
      * @var array
@@ -44,6 +51,11 @@ class Cli
         }
     }
 
+    public static function setVersion(string $version)
+    {
+        self::$version = $version;
+    }
+
     /**
      * Undocumented function
      *
@@ -51,7 +63,7 @@ class Cli
      */
     public static function intro()
     {
-        self::$instance->white('Noesis Framework')->green('0.1.0');
+        self::$instance->white('Noesis Framework')->green(self::$version);
         self::$instance->description("Noesis (React, InertiaJS, Tailwind, Slim) is a fully extensible framework with easy SPA routing using InertiaJS");
         self::$instance->br();
     }
@@ -71,10 +83,38 @@ class Cli
     public static function listAllCommands()
     {
         self::$instance->out('List of commands:');
+        $Padding = self::$instance->padding(30);
+
         self::$instance->green('help');
-        $Padding = self::$instance->padding(10);
         self::$instance->tab();
-        $Padding->label('help')->result('Display help documentation for the Noesis Console');
+        $Padding->label('.')->result('Display help documentation for the Noesis Console');
+
+        self::$instance->green('list');
+        self::$instance->tab();
+        $Padding->label('.')->result('List all commands');
+
+        self::$instance->green('pest');
+        self::$instance->tab();
+        $Padding->label('.')->result('Run all Pest tests');
+
+        self::$instance->tab();
+        $Padding->label(':init')->result('Initialize all pest files. Run this to setup tests folder in a new project');
+
+        self::$instance->tab();
+        $Padding->label(':cover')->result('Run all Pest tests with code coverage. Requires XDEBUG with env variable XDEBUG_MODE=coverage');
+
+        self::$instance->green('create');
+        self::$instance->tab();
+        $Padding->label(':presenter -n {name}')->result('Generates boilerplate Presenter class in server/app/Presenter');
+
+        self::$instance->tab();
+        $Padding->label(':provider -n {name}')->result('Generates boilerplate Provider class in server/app/Providers');
+
+        self::$instance->tab();
+        $Padding->label(':react-page -n {name}')->result('Generates boilerplate React page in client/js/Pages');
+
+        self::$instance->tab();
+        $Padding->label(':react-component -n {name}')->result('Generates boilerplate React component in client/js/Components');
     }
 
     public static function unknownCommandError()
@@ -106,6 +146,44 @@ class Cli
                 self::unknownCommandError();
             break;
         }
+    }
+
+
+    public static function pestInit()
+    {
+        $path_to_pest = dirname(dirname(__DIR__)) . '/vendor/bin/pest';
+        if (!file_exists($path_to_pest)) {
+            self::$instance->error('Pest not found. Please ensure it is installed and the file /vendor/bin/pest exists');
+            exit;
+        }
+
+        $command =  '--init';
+
+        passthru("$path_to_pest $command");
+    }
+
+    public static function pest()
+    {
+        $path_to_pest = dirname(dirname(__DIR__)) . '/vendor/bin/pest';
+        if (!file_exists($path_to_pest)) {
+            self::$instance->error('Pest not found. Please ensure it is installed and the file /vendor/bin/pest exists');
+            exit;
+        }
+
+        passthru("$path_to_pest");
+    }
+
+    public static function pestCoverage()
+    {
+        $path_to_pest = dirname(dirname(__DIR__)) . '/vendor/bin/pest';
+        if (!file_exists($path_to_pest)) {
+            self::$instance->error('Pest not found. Please ensure it is installed and the file /vendor/bin/pest exists');
+            exit;
+        }
+
+        $command =  '--coverage';
+
+        passthru("$path_to_pest $command");
     }
 
     public static function __callStatic(string $method, array $parameters)

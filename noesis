@@ -22,6 +22,8 @@ Cli::createFrom($argv, [
     ]
 ]);
 
+Cli::setVersion('0.2.0');
+
 Cli::intro();
 
 if (count($argv) < 2) {
@@ -32,7 +34,16 @@ if (count($argv) < 2) {
             Cli::displayUsage();
         break;
         case 'list' :
-            Cli::listAllCommands($Console);
+            Cli::listAllCommands();
+        break;
+        case 'pest:init' :
+            Cli::pestInit();
+        break;
+        case 'pest' :
+            Cli::pest();
+        break;
+        case 'pest:cover' :
+            Cli::pestCoverage();
         break;
         default:
             if (str_contains($argv[1], ':')) {

@@ -79,8 +79,6 @@ Initialize all pest files. Run this to setup tests folder in a new project
 
 Run all Pest tests with code coverage. Requires XDEBUG with env variable XDEBUG_MODE=coverage
 
-__NOTE:__ Windows users should use Powershell or CMD to run this command. Git Bash will not output correctly on windows for some reason (something to do with the php passtrhru() function perhaps). If you are using Git Bash, you can still use `/vendor/bin/pest --coverage` without any issues.
-
 ### php noe create:presenter {presenter_name}
 
 Generates a boilerplate Presenter class in `server/app/Presenter`

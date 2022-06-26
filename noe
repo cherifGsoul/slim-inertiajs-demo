@@ -1,14 +1,17 @@
 #!/usr/bin/env php
 <?php declare(strict_types=1);
 
+use Noesis\App\App;
+use Noesis\Command\Commands\Global\GlobalCommandsInvoker;
 use Noesis\Command\Commands\Create\CreateCommandsInvoker;
 use Noesis\Command\Commands\Pest\PestCommandsInvoker;
 use Symfony\Component\Console\Application;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$application = new Application('Noesis Framework', '0.3.0');
+$application = new Application('Noesis Framework', App::VERSION);
 
+$application = (new GlobalCommandsInvoker)($application);
 $application = (new CreateCommandsInvoker)($application);
 $application = (new PestCommandsInvoker)($application);
 

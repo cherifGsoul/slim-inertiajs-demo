@@ -122,3 +122,7 @@ Generates boilerplate React page in client/js/Pages
 ### php noe create:react-component {component_name}
 
 Generates boilerplate React component in client/js/Components
+
+## php noe inspect
+
+REPL for inspecting and debugging Noesis code directly in the terminal during development (like Laravel's `php artisan tinker`)

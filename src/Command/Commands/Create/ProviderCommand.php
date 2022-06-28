@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 namespace Noesis\Command\Commands\Create;
 
-use Noesis\Command\Formatter;
+use Noesis\Command\Formatable;
 use Noesis\PhpGenerator\Object\Method;
 use Noesis\PhpGenerator\Object\Parameter;
 use Noesis\PhpGenerator\PhpClassGenerator;
@@ -13,7 +13,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class ProviderCommand extends Command
 {
-    use Formatter;
+    use Formatable;
     protected static $defaultName = 'create:provider';
     protected static $defaultDescription = 'Generates boilerplate Provider class in server/app/Providers';
 

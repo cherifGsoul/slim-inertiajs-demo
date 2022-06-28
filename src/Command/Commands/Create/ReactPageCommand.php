@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 namespace Noesis\Command\Commands\Create;
 
-use Noesis\Command\Formatter;
+use Noesis\Command\Formatable;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Exception\LogicException;
 use Symfony\Component\Console\Input\InputArgument;
@@ -10,7 +10,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class ReactPageCommand extends Command
 {
-    use Formatter;
+    use Formatable;
+    
     protected static $defaultName = 'create:react-page';
     protected static $defaultDescription = 'Generates boilerplate React page in client/js/Pages';
 

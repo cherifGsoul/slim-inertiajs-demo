@@ -3,7 +3,7 @@ namespace Noesis\Command;
 
 use Symfony\Component\Console\Output\OutputInterface;
 
-trait Formatter
+trait Formatable
 {
     public function info($message, $writeln = true): void
     {

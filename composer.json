@@ -24,7 +24,8 @@
         "zeuxisoo/slim-whoops": "^0.7.3",
         "monolog/monolog": "^3.1",
         "symfony/console": "^6.1",
-        "psy/psysh": "^0.11.5"
+        "psy/psysh": "^0.11.5",
+        "laminas/laminas-permissions-acl": "^2.9"
     },
     "require-dev": {
         "pestphp/pest": "^1.21",

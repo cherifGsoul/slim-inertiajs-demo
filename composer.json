@@ -2,18 +2,26 @@
     "name": "luke-watts/noesis-framework",
     "description": "Noesis Framework: Slim PHP (v4) with InertiaJS, React (v18) and TailwindCSS front-ends for robust SPAs with less API requests",
     "licence": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Noesis\\": "src/",
-            "App\\": "server/app"
-        }
-    },
     "authors": [
         {
             "name": "Luke Watts",
             "email": "watts.luke85@gmail.com"
         }
     ],
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Noesis\\": "src/",
+            "App\\": "server/app"
+        },
+        "files": [
+            "src/Support/functions.php"
+        ]
+    },
     "require": {
         "php": ">=7.4",
         "cherif/inertia-psr15": "^0.1.0",
@@ -25,15 +33,11 @@
         "monolog/monolog": "^3.1",
         "symfony/console": "^6.1",
         "psy/psysh": "^0.11.5",
-        "laminas/laminas-permissions-acl": "^2.9"
+        "laminas/laminas-permissions-acl": "^2.9",
+        "psr7-sessions/storageless": "^8.4"
     },
     "require-dev": {
         "pestphp/pest": "^1.21",
         "maximebf/debugbar": "^1.18"
-    },
-    "config": {
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
     }
 }

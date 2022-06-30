@@ -2,6 +2,8 @@
 namespace Noesis\App\Middleware;
 
 use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;
+use Lcobucci\JWT\Signer\Key\InMemory;
+use PSR7Sessions\Storageless\Http\SessionMiddleware;
 use Zeuxisoo\Whoops\Slim\WhoopsMiddleware;
 use Slim\App;
 
@@ -12,6 +14,15 @@ class AppMiddlewareInvoker
         $app->addMiddleware($container->get(InertiaMiddleware::class));
         $app->addBodyParsingMiddleware();
         $app->addRoutingMiddleware();
+        
+        $app->add(new AclMiddleware);
+        
+        $app->add(new AppSessionMiddleware);
+        $app->add(SessionMiddleware::fromSymmetricKeyDefaults(
+            InMemory::plainText('mBC5v1sOKVvbdEitdSBenu59nfNfhwkedkJVNabosTw='),
+            1200
+        ));
+
         $app->add(new WhoopsMiddleware([
             'enable' => ($container->get('config')->environment !== 'prod' && $container->get('config')->environment !== 'production') ? true : false,
             'editor' => 'vscode'

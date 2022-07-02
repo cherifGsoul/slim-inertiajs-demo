@@ -30,8 +30,9 @@ class ProviderCommand extends Command
         $class_name = "{$name}Provider";
         $ClassGenerator = new PhpClassGenerator($class_name);
         $ClassGenerator->setNamespace('App\Providers');
-        $ClassGenerator->addImplements('\Noesis\ServiceProvider\ServiceProviderInterface');
         $ClassGenerator->addUseStatement('Psr\Container\ContainerInterface');
+        $ClassGenerator->addUseStatement('Noesis\ServiceProvider\ServiceProviderInterface');
+        $ClassGenerator->addImplements('ServiceProviderInterface');
         $body = "return new \stdClass;";
         $ClassGenerator->addMethod(
             '__invoke',

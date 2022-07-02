@@ -13,21 +13,20 @@ class PhpClassGenerator
     private const RETURN_TYPE_VOID = 'void';
     private const RETURN_TYPE_OBJECT = 'object';
 
-    private string $class_name;
-    private string $type;
-    private bool $strict_types = true;
     private string $namespace;
     private array $methods = [];
     private array $use_statements = [];
-    private string $extends;
+    private string $extends = '';
     private array $implements = [];
     private string $output;
 
-    public function __construct(string $class_name, string $type = self::TYPE_CLASS, bool $declare_strict_types = true)
+    public function __construct(
+        private string $class_name, 
+        private string $type = self::TYPE_CLASS, 
+        private bool $strict_types = true
+        )
     {
-        $this->class_name = $class_name;
-        $this->type = $type;
-        $this->strict_types = $declare_strict_types;
+        // PHP8 :)
     }
 
     public function setNamespace(string $namespace)
@@ -92,7 +91,7 @@ class PhpClassGenerator
     {
         $type = $this->type;
         $class_name = $this->class_name;
-        $has_extends = (is_array($this->implements) && count($this->implements) > 0);
+        $has_extends = (!empty(trim($this->extends)));
         $implements = implode(', ', $this->implements);
         $has_implements = strlen(trim($implements)) > 0;
         $line = "$type $class_name";

@@ -34,10 +34,11 @@
         "symfony/console": "^6.1",
         "psy/psysh": "^0.11.5",
         "laminas/laminas-permissions-acl": "^2.9",
-        "psr7-sessions/storageless": "^8.4",
         "nesbot/carbon": "^2.59",
         "league/oauth2-github": "^3.0",
-        "vlucas/phpdotenv": "^5.4"
+        "vlucas/phpdotenv": "^5.4",
+        "bryanjhv/slim-session": "^4.1",
+        "cakephp/collection": "^4.4"
     },
     "require-dev": {
         "pestphp/pest": "^1.21",

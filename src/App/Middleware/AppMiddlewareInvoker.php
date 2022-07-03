@@ -2,10 +2,13 @@
 namespace Noesis\App\Middleware;
 
 use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;
-use Lcobucci\JWT\Signer\Key\InMemory;
-use PSR7Sessions\Storageless\Http\SessionMiddleware;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 use Zeuxisoo\Whoops\Slim\WhoopsMiddleware;
+use Psr\Http\Message\ResponseInterface;
+use Slim\Middleware\Session;
 use Slim\App;
+use SlimSession\Helper;
 
 class AppMiddlewareInvoker
 {
@@ -17,11 +20,22 @@ class AppMiddlewareInvoker
         
         $app->add(new AclMiddleware);
         
-        $app->add(new AppSessionMiddleware);
-        $app->add(SessionMiddleware::fromSymmetricKeyDefaults(
-            InMemory::plainText('mBC5v1sOKVvbdEitdSBenu59nfNfhwkedkJVNabosTw='),
-            1200
-        ));
+        $app->add(function(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+        {
+            $session = new Session([
+                'name' => 'noesis',
+                'autorefresh' => true,
+                'lifetime' => '1 hour'
+            ]);
+
+            $request = $request->withAttribute('session', new Helper);
+
+            return $session($request, $handler);
+        });
+        // $app->add(SessionMiddleware::fromSymmetricKeyDefaults(
+        //     InMemory::plainText('mBC5v1sOKVvbdEitdSBenu59nfNfhwkedkJVNabosTw='),
+        //     1200
+        // ));
 
         $app->add(new WhoopsMiddleware([
             'enable' => ($container->get('config')->environment !== 'prod' && $container->get('config')->environment !== 'production') ? true : false,

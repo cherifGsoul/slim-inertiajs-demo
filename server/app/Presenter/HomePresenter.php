@@ -12,8 +12,13 @@ class HomePresenter extends Presenter\Presenter implements Presenter\PresenterIn
     {
         $inertia = $request->getAttribute(InertiaMiddleware::INERTIA_ATTRIBUTE);
 
+        $session = session($request);
+        $user = ($session->exists('user')) ? $session->get('user') : [];
+        $message = (!empty($user)) ? "Hello from {$user['name']}!" : 'Hello from Inertia Response!';
+
         return $inertia->render('Home', [
-            'message' => 'Hello from Inertia Response!'
+            'user' => $user,
+            'message' => $message
         ]);
     }
 }

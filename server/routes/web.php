@@ -1,10 +1,11 @@
 <?php declare(strict_types=1);
 
-use Noesis\View\View;
-use App\Presenter\HomePresenter;
-use App\Presenter\ContactPresenter;
-use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Message\ResponseInterface as Response;
+use Noesis\Auth\Route\OAuthRoutesInvoker;
+use App\Presenter\ContactPresenter;
+use App\Presenter\HomePresenter;
+use Noesis\View\View;
 
 $route->get('/', HomePresenter::class);
 $route->get('/contact', ContactPresenter::class);
@@ -14,3 +15,7 @@ $route->get('/non-inertia-view', function(Request $request, Response $response) 
 
     return $view->render($response, 'non-inertia-view.php', ['author' => 'Luke Watts']);
 });
+
+$route = (new OAuthRoutesInvoker)($route, [
+    'github',
+]);

@@ -9,19 +9,12 @@ Encore
     .setOutputPath('public/build/')
     // .setOutputPath('build/')
     .setPublicPath('/build')
-    .addLoader({
-        test: /\.(svelte)$/,
-        use: {
-            loader: 'svelte-loader',
-            options: {
-                emitCss: true,
-                hotReload: true,
-                dev: true,
-            },
-        },
+    .enableVueLoader(() => {}, {
+        version: 3,
+        runtimeCompilerBuild: true,
     })
     .addAliases({
-        '@': path.resolve('assets/js')
+        '@': path.resolve('assets/js'),
     })
     .addEntry('app', './assets/js/app.js')
     // .splitEntryChunks()
@@ -36,7 +29,7 @@ Encore
     // .enableSassLoader()
 
 const config = Encore.getWebpackConfig();
-config.resolve.mainFields = ['svelte', 'browser', 'module', 'main']
-config.resolve.extensions =  ['.wasm', '.mjs', '.js', '.json', '.jsx', '.vue', '.ts', '.tsx', '.svelte']
+// config.resolve.mainFields = ['svelte', 'browser', 'module', 'main']
+// config.resolve.extensions =  ['.wasm', '.mjs', '.js', '.json', '.jsx', '.vue', '.ts', '.tsx', '.svelte']
 
 module.exports = config

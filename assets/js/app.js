@@ -1,8 +1,11 @@
-import { createInertiaApp } from '@inertiajs/inertia-svelte'
+import { createApp, h } from 'vue'
+import { createInertiaApp } from '@inertiajs/inertia-vue3'
 
 createInertiaApp({
-    resolve: name => require(`./Pages/${name}.svelte`),
-    setup({ el, App, props }) {
-        new App({ target: el, props })
+    resolve: name => require(`./Pages/${name}`),
+    setup({ el, App, props, plugin }) {
+        createApp({ render: () => h(App, props) })
+            .use(plugin)
+            .mount(el)
     },
 })

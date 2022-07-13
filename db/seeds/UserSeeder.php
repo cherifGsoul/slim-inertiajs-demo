@@ -21,7 +21,9 @@ class UserSeeder extends AbstractSeed
                 'email' => 'watts.luke@yahoo.com',
                 'first_name' => 'Luke',
                 'last_name' => 'Watts',
-                'full_name' => 'Luke Watts'
+                'full_name' => 'Luke Watts',
+                'created_at' => \Illuminate\Support\Carbon::now(),
+                'updated_at' => \Illuminate\Support\Carbon::now(),
             ]
         ];
 

@@ -2,8 +2,9 @@
 namespace Noesis\Auth\Adapter;
 
 use App\Model\User;
-use Laminas\Authentication\Adapter\AdapterInterface;
 use Laminas\Authentication\Result;
+use Illuminate\Database\Eloquent\Collection;
+use Laminas\Authentication\Adapter\AdapterInterface;
 
 class TwitterAuthentication implements AdapterInterface
 {
@@ -54,11 +55,11 @@ class TwitterAuthentication implements AdapterInterface
     /**
      * Get User from storage
      *
-     * @return array
+     * @return Collection
      */
-    public function getUsersWhere(string $field, mixed $value): array
+    public function getUsersWhere(string $field, mixed $value): Collection
     {
-        return User::where([$field => $value]);
+        return User::where($field, $value)->get();
     }
 
     private function getResultForCount(int $count)

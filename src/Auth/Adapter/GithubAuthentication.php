@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 namespace Noesis\Auth\Adapter;
 
-use App\Model\Model;
 use App\Model\User;
-use Laminas\Authentication\Adapter\AdapterInterface;
 use Laminas\Authentication\Result;
+use Illuminate\Database\Eloquent\Collection;
+use Laminas\Authentication\Adapter\AdapterInterface;
 
 class GithubAuthentication implements AdapterInterface
 {
@@ -76,11 +76,11 @@ class GithubAuthentication implements AdapterInterface
     /**
      * Get User from storage
      *
-     * @return array
+     * @return Collection
      */
-    public function getUsersWhere(string $field, mixed $value): array
+    public function getUsersWhere(string $field, mixed $value): Collection
     {
-        return User::where([$field => $value]);
+        return User::where($field, $value)->get();
     }
 
     private function getResultForCount(int $count)
@@ -106,6 +106,6 @@ class GithubAuthentication implements AdapterInterface
     {
         $users = $this->getUsersWhere('email', $this->email);
 
-        return $this->getResultForCount(count($users));
+        return $this->getResultForCount($users->count());
     }
 }

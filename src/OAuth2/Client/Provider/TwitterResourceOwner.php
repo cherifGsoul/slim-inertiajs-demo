@@ -18,9 +18,9 @@ class TwitterResourceOwner implements ResourceOwnerInterface
     protected $domain;
 
     /**
-     * @param array $response
+     * @param \stdClass $response
      */
-    public function __construct(array $response)
+    public function __construct(\stdClass $response)
     {
         $response = $response->data[0] ?? [];
         $this->response = (array) $response ?? [];

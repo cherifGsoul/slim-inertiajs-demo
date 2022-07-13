@@ -38,7 +38,13 @@
         "league/oauth2-github": "^3.0",
         "vlucas/phpdotenv": "^5.4",
         "bryanjhv/slim-session": "^4.1",
-        "cakephp/collection": "^4.4"
+        "cakephp/collection": "^4.4",
+        "league/oauth2-linkedin": "^5.1",
+        "ircmaxell/random-lib": "^1.2",
+        "abraham/twitteroauth": "^4.0",
+        "laminas/laminas-authentication": "^2.11",
+        "robmorgan/phinx": "^0.12.11",
+        "illuminate/database": "^9.19"
     },
     "require-dev": {
         "pestphp/pest": "^1.21",

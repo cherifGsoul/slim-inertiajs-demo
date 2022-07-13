@@ -13,8 +13,12 @@ class ContactPresenter extends Presenter\Presenter implements Presenter\Presente
         $inertia = $request->getAttribute(InertiaMiddleware::INERTIA_ATTRIBUTE);
         $session = session($request);
         $user = $session->exists('user') ? $session->get('user') : [];
+        $logged_in = false;
+        if (!empty($user)) {
+            $logged_in = true;
+        }
 
-        return $inertia->render('Contact', ['author' => 'Luke Watts', 'user' => $user]);
+        return $inertia->render('Contact', ['author' => 'Luke Watts', 'user' => $user, 'logged_in' => $logged_in]);
     }
 
 }

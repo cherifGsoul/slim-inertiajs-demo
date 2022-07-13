@@ -7,6 +7,7 @@ use App\Presenter\ContactPresenter;
 use App\Presenter\HomePresenter;
 use Noesis\View\View;
 
+/** @var \Slim\Routing\RouteCollectorProxy $route */
 $route->get('/', HomePresenter::class);
 $route->get('/contact', ContactPresenter::class);
 $route->get('/non-inertia-view', function(Request $request, Response $response) {
@@ -18,4 +19,6 @@ $route->get('/non-inertia-view', function(Request $request, Response $response) 
 
 $route = (new OAuthRoutesInvoker)($route, [
     'github',
+    'linkedin',
+    'twitter'
 ]);

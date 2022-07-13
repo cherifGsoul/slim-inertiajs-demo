@@ -6,7 +6,7 @@ import Heading from '../Components/Heading';
 export default function Contact(props) {
     return (
 <div>
-    <Header user={props.user} />
+    <Header {...props} />
     {/* Breadcrumbs */}
     <div className="p-6"><Link href="/">Home</Link> / Contact</div>
 

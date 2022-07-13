@@ -2,13 +2,14 @@
 namespace Noesis\App\Middleware;
 
 use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;
+use Noesis\Auth\Adapter\TwitterAuthentication;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Zeuxisoo\Whoops\Slim\WhoopsMiddleware;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Middleware\Session;
-use Slim\App;
 use SlimSession\Helper;
+use Slim\App;
 
 class AppMiddlewareInvoker
 {
@@ -19,7 +20,6 @@ class AppMiddlewareInvoker
         $app->addRoutingMiddleware();
         
         $app->add(new AclMiddleware);
-        
         $app->add(function(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
         {
             $session = new Session([

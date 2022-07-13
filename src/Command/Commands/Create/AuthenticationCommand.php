@@ -31,11 +31,9 @@ class AuthenticationCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $options = collect($input->getOptions())->filter(function($value, $option) {
+        $options = collect($input->getOptions())->filter(function($value) {
             return ($value === true);
-        });
-
-        $options->each(function($value, $option) {
+        })->each(function($value, $option) {
             switch ($option) {
                 case 'github' :
                     $this->createGithubOauth2Files();

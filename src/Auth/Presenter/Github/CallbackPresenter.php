@@ -3,8 +3,10 @@ namespace Noesis\Auth\Presenter\Github;
 
 use Psr\Http\Message\ServerRequestInterface;
 use League\OAuth2\Client\Provider\Github;
+use Noesis\Auth\Adapter\GithubAuthentication;
 use Psr\Http\Message\ResponseInterface;
 use Noesis\Presenter;
+use Noesis\Support\UserFactory;
 
 class CallbackPresenter extends Presenter\Presenter implements Presenter\PresenterInterface
 {
@@ -21,8 +23,12 @@ class CallbackPresenter extends Presenter\Presenter implements Presenter\Present
         // Now we have a token you can look up a users profile data
         try {
             // We got an access token, let's now get the user's details
-            $user = $provider->getResourceOwner($token);
-            session($request)->set('user', $user->toArray());
+            $resource_owner = $provider->getResourceOwner($token);
+            $user = UserFactory::fromOauthResourceOwner($resource_owner, 'github');
+            
+            if (GithubAuthentication::validate($user['email'])->isValid()) {
+                session($request)->set('user', $user);
+            }
         } catch (\Exception $e) {
             // Failed to get user details
             throw new \Exception("Could not retreive user details from Github. {$e->getMessage()}");

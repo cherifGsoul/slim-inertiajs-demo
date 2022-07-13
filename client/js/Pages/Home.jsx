@@ -5,7 +5,7 @@ import Heading from '../Components/Heading';
 export default function Home(props) {
     return (
 <div>
-    <Header user={props.user} />
+    <Header {...props} />
     <div className="p-6">Home</div>
 
     <div className="w-4/6 border bg-white shadow overflow-hidden sm:rounded-lg mx-auto p-6">

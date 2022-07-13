@@ -19,9 +19,10 @@ if (!function_exists('user')) {
 }
 
 if (!function_exists('env')) {
-    function env(string $key)
+    function env(string $key, mixed $default = null)
     {
-        return $_ENV[$key];
+        return (!is_array($_ENV) || !array_key_exists($key, $_ENV))
+            ? $default : $_ENV[$key];
     }
 }
 

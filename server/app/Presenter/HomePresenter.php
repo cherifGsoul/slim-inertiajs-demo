@@ -14,9 +14,17 @@ class HomePresenter extends Presenter\Presenter implements Presenter\PresenterIn
 
         $session = session($request);
         $user = ($session->exists('user')) ? $session->get('user') : [];
-        $message = (!empty($user)) ? "Hello from {$user['name']}!" : 'Hello from Inertia Response!';
-
+        $logged_in = false;
+        $message = 'Hello from Inertia Response!';
+        if (!empty($user)) {
+            $logged_in = true;
+            if (array_key_exists('username', $user)) {
+                $message = "Hello {$user['username']}!";
+            }
+        }
+        
         return $inertia->render('Home', [
+            'logged_in' => $logged_in, 
             'user' => $user,
             'message' => $message
         ]);

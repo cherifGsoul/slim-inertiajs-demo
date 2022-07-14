@@ -1,6 +1,5 @@
 <?php declare(strict_types=1);
 
-use Noesis\Support\Collection;
 use Noesis\Support\User;
 use Noesis\Support\Session;
 
@@ -23,12 +22,5 @@ if (!function_exists('env')) {
     {
         return (!is_array($_ENV) || !array_key_exists($key, $_ENV))
             ? $default : $_ENV[$key];
-    }
-}
-
-if (!function_exists('collect')) {
-    function collect($items)
-    {
-        return new Collection($items);
     }
 }

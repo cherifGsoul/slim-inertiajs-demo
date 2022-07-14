@@ -48,6 +48,7 @@
     },
     "require-dev": {
         "pestphp/pest": "^1.21",
-        "maximebf/debugbar": "^1.18"
+        "maximebf/debugbar": "^1.18",
+        "pestphp/pest-plugin-mock": "^1.0"
     }
 }

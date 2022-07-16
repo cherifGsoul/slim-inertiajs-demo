@@ -26,16 +26,13 @@ class PresenterCommand extends Command
     {
         $name = $input->getArgument('name');
         $class_name = "{$name}Presenter";
-        $body = '$inertia = $request->getAttribute(InertiaMiddleware::INERTIA_ATTRIBUTE);
-
-        return $inertia->render(\'Index\', [\'var\' => \'I can be used in JSX!\']);';
+        $body = 'return inertia($request)->render(\'Index\', [\'var\' => \'I can be used in JSX!\']);';
 
         $ClassGenerator = new PhpClassGenerator($class_name);
         $ClassGenerator->setNamespace('App\Presenter')
             ->addUseStatement('Noesis\Presenter')
             ->addUseStatement('Psr\Http\Message\ServerRequestInterface')
             ->addUseStatement('Psr\Http\Message\ResponseInterface')
-            ->addUseStatement('Cherif\InertiaPsr15\Middleware\InertiaMiddleware')
             ->setExtends('Presenter\Presenter')
             ->addImplements('Presenter\PresenterInterface')
             ->addMethod(

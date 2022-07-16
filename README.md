@@ -94,7 +94,6 @@ declare(strict_types=1);
 
 namespace App\Presenter;
 
-use Cherif\InertiaPsr15\Middleware\InertiaMiddleware;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -104,9 +103,7 @@ class TestPresenter extends \Noesis\Presenter\Presenter
 {
     public function index($request, $response): ResponseInterface
     {
-        $inertia = $request->getAttribute(InertiaMiddleware::INERTIA_ATTRIBUTE);
-
-        return $inertia->render('Index', ['var' => 'I can be used in JSX!']);
+        return inertia($request)->render('Index', ['var' => 'I can be used in JSX!']);
     }
 }
 ```
